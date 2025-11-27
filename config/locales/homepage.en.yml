@@ -37,17 +37,17 @@ en:
       view_all: "View all recipes"
       read_recipe: "Read Recipe"
       card_1:
-        title: "Automating Weekly Meal Prep"
-        description: "\"Saved me 2 hours/week planning dinners based on what's in my fridge.\""
-        author: "By Petr at AI Jam #4"
+        title: "Firebird Database Analysis with Claude CLI"
+        description: "\"Used Claude CLI in Docker to analyze legacy Firebird database structure and generate migration scripts.\""
+        author: "From AI Jam Session Nov 27"
       card_2:
-        title: "Client Email Summarizer"
-        description: "\"Automatically summarizes long threads into action items.\""
-        author: "By Sarah at AI Jam #2"
+        title: "Fakturoid Invoice Automation"
+        description: "\"Automated invoice processing workflow, saving ~2 hours every month on repetitive tasks.\""
+        author: "From AI Jam Session Nov 27"
       card_3:
-        title: "Cat Logo Generator"
-        description: "\"Tried to generate a logo for my cat, but it looked like a dog every time.\""
-        author: "By Tom at AI Jam #5"
+        title: "Voice-to-Prompt Converter"
+        description: "\"Attempted to generate conversational prompts from voice recordings. Mixed results—needs more tuning.\""
+        author: "From AI Jam Session Nov 27"
     join:
       title: "The Price of Admission is Effort."
       subtitle_html: "To receive an invite to the next Jam, you do not need to pay money.<br /> You simply need to contribute one \"Recipe\" or \"Experiment.\""

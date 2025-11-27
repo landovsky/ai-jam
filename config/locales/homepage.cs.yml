@@ -37,17 +37,17 @@ cs:
       view_all: "Zobrazit všechny recepty"
       read_recipe: "Číst recept"
       card_1:
-        title: "Automatizace týdenního jídelníčku"
-        description: "\"Ušetřilo mi to 2 hodiny týdně plánování večeří podle toho, co mám v lednici.\""
-        author: "Petr na AI Jam #4"
+        title: "Analýza Firebird databáze s Claude CLI"
+        description: "\"Použil jsem Claude CLI v Dockeru k analýze struktury legacy Firebird databáze a generování migračních skriptů.\""
+        author: "Z AI Jam sezení 27. listopadu"
       card_2:
-        title: "Shrnutí klientských e-mailů"
-        description: "\"Automaticky shrnuje dlouhá vlákna do akčních kroků.\""
-        author: "Sarah na AI Jam #2"
+        title: "Automatizace Fakturoidu"
+        description: "\"Automatizoval jsem workflow zpracování faktur, ušetřím ~2 hodiny měsíčně na opakujících se úkolech.\""
+        author: "Z AI Jam sezení 27. listopadu"
       card_3:
-        title: "Generátor loga kočky"
-        description: "\"Zkoušel jsem vygenerovat logo pro svou kočku, ale pokaždé to vypadalo jako pes.\""
-        author: "Tom na AI Jam #5"
+        title: "Převodník hlasu na prompty"
+        description: "\"Pokusil jsem se generovat konverzační prompty z hlasových nahrávek. Smíšené výsledky—potřebuje více ladění.\""
+        author: "Z AI Jam sezení 27. listopadu"
     join:
       title: "Cena za vstup je úsilí."
       subtitle_html: "Abyste dostali pozvánku na další Jam, nemusíte platit peníze.<br /> Stačí přispět jedním \"Receptem\" nebo \"Experimentem.\""
