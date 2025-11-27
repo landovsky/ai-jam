@@ -2,26 +2,26 @@ cs:
   homepage:
     hero:
       brand: "AI Jam"
-      badge: "🧪 Živá laboratoř pro AI"
-      title_html: "Přestaňte sledovat. <br class='hidden md:block' />Začněte tvořit."
+      badge: "🧪 AI laboratoř"
+      title_html: "Přestali jsme sledovat. <br class='hidden md:block' />Tvoříme a sdílíme."
       subtitle_html: "Číst o AI nestačí. <br /> Jediný způsob, jak těmto nástrojům porozumět, je <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>používat je</span>."
       cta_join: "Připojit se k Jamu"
-      cta_how: "Jak to funguje"
+      cta_how: "Jak to probíhá"
     how_it_works:
       title: "Jak Jamujeme"
-      subtitle: "Více dělání, méně poslouchání."
+      subtitle: "Vaříme a sdílíme AI recepty."
       step_1:
-        title: "1. Download"
-        description: "Rychlý přehled toho, co kdo zkoumá. Žádné dlouhé přednášky, jen signál."
+        title: "1. Connect"
+        description: "Kolečko - rychlý přehled toho, co kdo zkoumá, nebo chce řešit. Ani přednáška, ani diskuse, jen signál."
       step_2:
-        title: "2. Práce"
-        description: "Rozdělíme se do týmů a řešíme konkrétní výzvy. Notebooky otevřené, nástroje běží."
+        title: "2. Brew"
+        description: "Rozdělíme se do týmů a řešíme konkrétní výzvy. Notebooky otevřené, tokeny hoří."
       step_3:
         title: "3. Show & Tell"
-        description: "Sdílíme naše zjištění – jak průlomy, tak slepé uličky."
+        description: "Sdílíme naše zjištění, ukazujeme si demo (průlomy i slepé uličky)."
     who_is_this_for:
       title: "Pro koho to je?"
-      subtitle: "Jsme mix přátel, kolegů a zvědavých myslí."
+      subtitle: "Jsme pracovně heterogenní mix přátel, kolegů a zvědavých myslí."
       pragmatist:
         title: "Pragmatik"
         description: "Chcete automatizovat nudné části své práce nebo života. Zajímají vás výsledky, ne hype."
@@ -29,7 +29,7 @@ cs:
         title: "Student"
         description: "Jste unaveni z teoretického \"thought leadershipu\" a chcete praktické \"how-to\" znalosti."
       imposter:
-        title: "\"Podvodník\""
+        title: "Imposter"
         description: "Toto je bezpečný prostor. Výslovně vítáme \"selhání\". Všichni na to přicházíme společně."
     recipes:
       title: "Galerie Receptů"
