@@ -40,8 +40,7 @@ gem 'turbo-rails'
 # gem 'audited'
 # gem 'discard'
 # gem 'google-cloud-storage', require: false
-gem 'pg', '~> 1.6'
-gem 'pgcrypto'
+gem 'sqlite3', '~> 2.0'
 # gem 'pg_query', '~> 6.1'
 # gem 'pg_search'
 # gem "kredis"
