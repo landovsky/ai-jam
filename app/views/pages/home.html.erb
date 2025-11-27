@@ -1,225 +1,241 @@
-<div class="bg-slate-50 min-h-screen font-sans text-slate-900">
+<div class="bg-amber-50 min-h-screen font-sans text-stone-900 selection:bg-orange-300 selection:text-stone-900">
   <!-- Hero Section -->
-  <section class="relative bg-slate-900 text-white py-24 px-6 overflow-hidden">
-    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+  <section class="relative bg-amber-100 text-stone-900 py-24 px-6 overflow-hidden border-b-4 border-stone-900">
+    <!-- Language Switcher -->
+    <div class="absolute top-6 right-6 z-20 flex gap-3">
+      <%= link_to "EN", root_path(locale: :en), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :en ? 'bg-orange-300' : ''}" %>
+      <%= link_to "CS", root_path(locale: :cs), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :cs ? 'bg-orange-300' : ''}" %>
+    </div>
+
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1c1917_2px,transparent_2px)] [background-size:24px_24px] z-0"></div>
+
+    <!-- Jam Jar Illustrations -->
+    <div class="absolute top-20 left-6 md:left-12 z-10 hidden md:block transform rotate-12 hover:rotate-6 transition-transform duration-300">
+      <%= image_tag "homepage/jam_jar_left.svg", class: "drop-shadow-[6px_6px_0px_rgba(28,25,23,1)]", alt: "AI Jam Jar" %>
+    </div>
+
+    <div class="absolute top-32 right-6 md:right-12 z-10 hidden md:block transform -rotate-12 hover:-rotate-6 transition-transform duration-300">
+      <%= image_tag "homepage/jam_jar_right.svg", class: "drop-shadow-[6px_6px_0px_rgba(28,25,23,1)]", alt: "Jam Jar" %>
+    </div>
+
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-300 uppercase bg-indigo-900/50 rounded-full border border-indigo-700/50">
-        A Living Lab for AI
+      <div class="mb-6">
+        <h1 class="text-7xl md:text-9xl font-black text-orange-500 tracking-tighter transform -rotate-3 drop-shadow-[4px_4px_0px_rgba(28,25,23,1)]" style="-webkit-text-stroke: 3px #1c1917;">
+          <%= t('homepage.hero.brand') %>
+        </h1>
       </div>
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
-        Stop Watching. <br class="hidden md:block" />Start Building.
-      </h1>
-      <p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-        Reading about AI is not enough. The only way to understand these tools is to use them.
-        <br class="hidden md:block" />
-        <strong>AI Jam</strong> is a fortnightly meetup for doers, not just talkers.
+
+      <div class="inline-block px-4 py-2 mb-8 text-sm font-black tracking-widest uppercase bg-white border-2 border-stone-900 shadow-[4px_4px_0px_0px_#1c1917] rounded-full transform rotate-2">
+        <%= t('homepage.hero.badge') %>
+      </div>
+      <h2 class="text-5xl md:text-7xl font-black tracking-tight mb-8 text-stone-900 drop-shadow-sm">
+        <%= t('homepage.hero.title_html') %>
+      </h2>
+      <p class="text-xl md:text-3xl font-bold text-stone-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <%= t('homepage.hero.subtitle_html') %>
       </p>
-      <div class="flex justify-center gap-4">
-        <a href="#join" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-indigo-500/50">
-          Join the Jam
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a href="#join" class="bg-orange-500 text-white font-black py-4 px-10 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl">
+          <%= t('homepage.hero.cta_join') %>
         </a>
-        <a href="#how-it-works" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-full border border-slate-700 transition-all">
-          How it Works
+        <a href="#how-it-works" class="bg-white text-stone-900 font-black py-4 px-10 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl">
+          <%= t('homepage.hero.cta_how') %>
         </a>
       </div>
     </div>
   </section>
 
   <!-- How We Jam Section -->
-  <section id="how-it-works" class="py-20 px-6 bg-white border-b border-slate-100">
+  <section id="how-it-works" class="py-24 px-6 bg-white border-b-4 border-stone-900">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">How We Jam</h2>
-        <p class="text-lg text-slate-600">Maximize doing, minimize listening.</p>
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-black mb-6 text-stone-900"><%= t('homepage.how_it_works.title') %></h2>
+        <p class="text-xl font-bold text-stone-600"><%= t('homepage.how_it_works.subtitle') %></p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-12 relative">
         <!-- Connecting Line (Desktop) -->
-        <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-100 -z-10"></div>
+        <div class="hidden md:block absolute top-16 left-0 w-full h-1 bg-stone-900 border-b-2 border-stone-900 border-dashed -z-10 opacity-20"></div>
 
         <!-- Step 1 -->
-        <div class="relative bg-white p-6 pt-0 text-center">
-          <div class="w-24 h-24 mx-auto bg-indigo-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-            <span class="text-3xl">📥</span>
+        <div class="relative bg-white p-6 pt-0 text-center group">
+          <div class="w-32 h-32 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-8 border-4 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] overflow-hidden transition-transform transform group-hover:scale-110 group-hover:-rotate-3">
+            <%= image_tag "homepage/jam_download.png", class: "w-full h-full object-cover", alt: "The Download" %>
           </div>
-          <h3 class="text-xl font-bold mb-3">1. The Download</h3>
-          <p class="text-slate-600">A quick sync on what everyone is currently exploring. No long keynotes, just signal.</p>
+          <h3 class="text-2xl font-black mb-4 bg-stone-900 text-white inline-block px-3 py-1 transform -rotate-1"><%= t('homepage.how_it_works.step_1.title') %></h3>
+          <p class="text-stone-700 font-medium text-lg"><%= t('homepage.how_it_works.step_1.description') %></p>
         </div>
 
         <!-- Step 2 -->
-        <div class="relative bg-white p-6 pt-0 text-center">
-          <div class="w-24 h-24 mx-auto bg-indigo-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-            <span class="text-3xl">⚡️</span>
+        <div class="relative bg-white p-6 pt-0 text-center group">
+          <div class="w-32 h-32 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-8 border-4 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] overflow-hidden transition-transform transform group-hover:scale-110 group-hover:rotate-3">
+             <%= image_tag "homepage/jam_work.png", class: "w-full h-full object-cover", alt: "The Work Session" %>
           </div>
-          <h3 class="text-xl font-bold mb-3">2. The Work Session</h3>
-          <p class="text-slate-600">We break into squads to tackle specific challenges. Laptops open, tools running.</p>
+          <h3 class="text-2xl font-black mb-4 bg-stone-900 text-white inline-block px-3 py-1 transform rotate-1"><%= t('homepage.how_it_works.step_2.title') %></h3>
+          <p class="text-stone-700 font-medium text-lg"><%= t('homepage.how_it_works.step_2.description') %></p>
         </div>
 
         <!-- Step 3 -->
-        <div class="relative bg-white p-6 pt-0 text-center">
-          <div class="w-24 h-24 mx-auto bg-indigo-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-            <span class="text-3xl">🎤</span>
+        <div class="relative bg-white p-6 pt-0 text-center group">
+          <div class="w-32 h-32 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-8 border-4 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] overflow-hidden transition-transform transform group-hover:scale-110 group-hover:-rotate-2">
+             <%= image_tag "homepage/jam_share.png", class: "w-full h-full object-cover", alt: "The Show & Tell" %>
           </div>
-          <h3 class="text-xl font-bold mb-3">3. The Show & Tell</h3>
-          <p class="text-slate-600">We share our findings—both the breakthroughs and the roadblocks.</p>
+          <h3 class="text-2xl font-black mb-4 bg-stone-900 text-white inline-block px-3 py-1 transform -rotate-1"><%= t('homepage.how_it_works.step_3.title') %></h3>
+          <p class="text-stone-700 font-medium text-lg"><%= t('homepage.how_it_works.step_3.description') %></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Who is this for Section -->
-  <section class="py-20 px-6 bg-slate-50">
+  <section class="py-24 px-6 bg-amber-50 border-b-4 border-stone-900">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Who is this for?</h2>
-        <p class="text-lg text-slate-600">We are a mix of friends, colleagues, and curious minds.</p>
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-black mb-6 text-stone-900"><%= t('homepage.who_is_this_for.title') %></h2>
+        <p class="text-xl font-bold text-stone-600"><%= t('homepage.who_is_this_for.subtitle') %></p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Card 1 -->
-        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <div class="p-8 rounded-3xl bg-white border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all">
+          <div class="w-16 h-16 bg-sky-200 rounded-2xl flex items-center justify-center mb-6 text-stone-900 border-2 border-stone-900 shadow-[4px_4px_0px_0px_#1c1917]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">The Pragmatist</h3>
-          <p class="text-slate-600 leading-relaxed">You want to automate the boring parts of your work or life. You care about results, not hype.</p>
+          <h3 class="text-2xl font-black mb-3"><%= t('homepage.who_is_this_for.pragmatist.title') %></h3>
+          <p class="text-stone-700 font-medium leading-relaxed"><%= t('homepage.who_is_this_for.pragmatist.description') %></p>
         </div>
 
         <!-- Card 2 -->
-        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 text-emerald-600">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <div class="p-8 rounded-3xl bg-white border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all">
+          <div class="w-16 h-16 bg-lime-200 rounded-2xl flex items-center justify-center mb-6 text-stone-900 border-2 border-stone-900 shadow-[4px_4px_0px_0px_#1c1917]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">The Learner</h3>
-          <p class="text-slate-600 leading-relaxed">You are tired of theoretical "thought leadership" and want practical "how-to" knowledge.</p>
+          <h3 class="text-2xl font-black mb-3"><%= t('homepage.who_is_this_for.learner.title') %></h3>
+          <p class="text-stone-700 font-medium leading-relaxed"><%= t('homepage.who_is_this_for.learner.description') %></p>
         </div>
 
         <!-- Card 3 -->
-        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-6 text-rose-600">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <div class="p-8 rounded-3xl bg-white border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all">
+          <div class="w-16 h-16 bg-orange-200 rounded-2xl flex items-center justify-center mb-6 text-stone-900 border-2 border-stone-900 shadow-[4px_4px_0px_0px_#1c1917]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3">The "Imposter"</h3>
-          <p class="text-slate-600 leading-relaxed">This is a safe space. We explicitly welcome "failures". We are all figuring this out together.</p>
+          <h3 class="text-2xl font-black mb-3"><%= t('homepage.who_is_this_for.imposter.title') %></h3>
+          <p class="text-stone-700 font-medium leading-relaxed"><%= t('homepage.who_is_this_for.imposter.description') %></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Recipe Gallery Section -->
-  <section id="recipes" class="py-20 px-6 bg-slate-50">
+  <section id="recipes" class="py-24 px-6 bg-white border-b-4 border-stone-900">
     <div class="max-w-6xl mx-auto">
-      <div class="flex justify-between items-end mb-12">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Recipe Gallery</h2>
-          <p class="text-lg text-slate-600">Real problems solved by real people.</p>
+          <h2 class="text-4xl md:text-5xl font-black mb-4 text-stone-900"><%= t('homepage.recipes.title') %></h2>
+          <p class="text-xl font-bold text-stone-600"><%= t('homepage.recipes.subtitle') %></p>
         </div>
-        <a href="#" class="hidden md:inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800">
-          View all recipes <span aria-hidden="true" class="ml-2">&rarr;</span>
+        <a href="#" class="inline-flex items-center text-stone-900 font-bold hover:text-orange-600 transition-colors text-lg border-b-2 border-stone-900">
+          <%= t('homepage.recipes.view_all') %> <span aria-hidden="true" class="ml-2">&rarr;</span>
         </a>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Recipe Card 1 -->
-        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow cursor-pointer group">
-          <div class="h-48 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-6">
-            <div class="text-6xl">🥘</div>
+        <article class="bg-white rounded-3xl border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] overflow-hidden hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all cursor-pointer group">
+          <div class="h-48 bg-sky-100 flex items-center justify-center p-6 border-b-2 border-stone-900">
+            <div class="text-7xl transform group-hover:scale-110 transition-transform">🥘</div>
           </div>
-          <div class="p-6">
-            <div class="flex gap-2 mb-3">
-              <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md">#Personal</span>
-              <span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-md">#ChatGPT</span>
+          <div class="p-8">
+            <div class="flex gap-2 mb-4">
+              <span class="px-3 py-1 bg-white border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">#Personal</span>
+              <span class="px-3 py-1 bg-green-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">#ChatGPT</span>
             </div>
-            <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-600 transition-colors">Automating Weekly Meal Prep</h3>
-            <p class="text-slate-600 text-sm mb-4">"Saved me 2 hours/week planning dinners based on what's in my fridge."</p>
-            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-              <span class="text-xs text-slate-500">By Petr at AI Jam #4</span>
-              <span class="text-indigo-600 text-sm font-medium">Read Recipe</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-orange-600 transition-colors"><%= t('homepage.recipes.card_1.title') %></h3>
+            <p class="text-stone-700 font-medium text-sm mb-6"><%= t('homepage.recipes.card_1.description') %></p>
+            <div class="flex items-center justify-between pt-4 border-t-2 border-stone-100">
+              <span class="text-xs font-bold text-stone-500"><%= t('homepage.recipes.card_1.author') %></span>
+              <span class="text-stone-900 text-sm font-black group-hover:underline"><%= t('homepage.recipes.read_recipe') %></span>
             </div>
           </div>
         </article>
 
         <!-- Recipe Card 2 -->
-        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow cursor-pointer group">
-          <div class="h-48 bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-6">
-             <div class="text-6xl">📧</div>
+        <article class="bg-white rounded-3xl border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] overflow-hidden hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all cursor-pointer group">
+          <div class="h-48 bg-amber-100 flex items-center justify-center p-6 border-b-2 border-stone-900">
+             <div class="text-7xl transform group-hover:scale-110 transition-transform">📧</div>
           </div>
-          <div class="p-6">
-            <div class="flex gap-2 mb-3">
-              <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-md">#Work</span>
-              <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-md">#Claude</span>
+          <div class="p-8">
+            <div class="flex gap-2 mb-4">
+              <span class="px-3 py-1 bg-white border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">#Work</span>
+              <span class="px-3 py-1 bg-blue-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">#Claude</span>
             </div>
-            <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-600 transition-colors">Client Email Summarizer</h3>
-            <p class="text-slate-600 text-sm mb-4">"Automatically summarizes long threads into action items."</p>
-            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-              <span class="text-xs text-slate-500">By Sarah at AI Jam #2</span>
-              <span class="text-indigo-600 text-sm font-medium">Read Recipe</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-orange-600 transition-colors"><%= t('homepage.recipes.card_2.title') %></h3>
+            <p class="text-stone-700 font-medium text-sm mb-6"><%= t('homepage.recipes.card_2.description') %></p>
+            <div class="flex items-center justify-between pt-4 border-t-2 border-stone-100">
+              <span class="text-xs font-bold text-stone-500"><%= t('homepage.recipes.card_2.author') %></span>
+              <span class="text-stone-900 text-sm font-black group-hover:underline"><%= t('homepage.recipes.read_recipe') %></span>
             </div>
           </div>
         </article>
 
         <!-- Recipe Card 3 (Failure) -->
-        <article class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow cursor-pointer group ring-2 ring-rose-100">
-          <div class="h-48 bg-gradient-to-br from-rose-50 to-pink-50 flex items-center justify-center p-6">
-             <div class="text-6xl">🐕</div>
+        <article class="bg-white rounded-3xl border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] overflow-hidden hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all cursor-pointer group">
+          <div class="h-48 bg-rose-100 flex items-center justify-center p-6 border-b-2 border-stone-900">
+             <div class="text-7xl transform group-hover:scale-110 transition-transform">🐕</div>
           </div>
-          <div class="p-6">
-            <div class="flex gap-2 mb-3">
-              <span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-medium rounded-md">#Failure</span>
-              <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-md">#Midjourney</span>
+          <div class="p-8">
+            <div class="flex gap-2 mb-4">
+              <span class="px-3 py-1 bg-rose-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">#Failure</span>
+              <span class="px-3 py-1 bg-purple-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">#Midjourney</span>
             </div>
-            <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-600 transition-colors">Cat Logo Generator</h3>
-            <p class="text-slate-600 text-sm mb-4">"Tried to generate a logo for my cat, but it looked like a dog every time."</p>
-            <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-              <span class="text-xs text-slate-500">By Tom at AI Jam #5</span>
-              <span class="text-indigo-600 text-sm font-medium">Read Recipe</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-orange-600 transition-colors"><%= t('homepage.recipes.card_3.title') %></h3>
+            <p class="text-stone-700 font-medium text-sm mb-6"><%= t('homepage.recipes.card_3.description') %></p>
+            <div class="flex items-center justify-between pt-4 border-t-2 border-stone-100">
+              <span class="text-xs font-bold text-stone-500"><%= t('homepage.recipes.card_3.author') %></span>
+              <span class="text-stone-900 text-sm font-black group-hover:underline"><%= t('homepage.recipes.read_recipe') %></span>
             </div>
           </div>
         </article>
-      </div>
-
-      <div class="mt-8 text-center md:hidden">
-        <a href="#" class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800">
-          View all recipes <span aria-hidden="true" class="ml-2">&rarr;</span>
-        </a>
       </div>
     </div>
   </section>
 
   <!-- Join / Ticket Section -->
-  <section id="join" class="py-24 px-6 bg-slate-900 text-white relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#4f46e5_0%,transparent_40%)] opacity-30"></div>
+  <section id="join" class="py-24 px-6 bg-amber-400 text-stone-900 relative overflow-hidden border-b-4 border-stone-900">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-orange-300 rounded-full border-4 border-stone-900 -mr-32 -mt-32 opacity-50"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full border-4 border-stone-900 -ml-24 -mb-24 opacity-50"></div>
 
     <div class="max-w-3xl mx-auto text-center relative z-10">
-      <h2 class="text-3xl md:text-5xl font-bold mb-6">The Price of Admission is Effort.</h2>
-      <p class="text-xl text-slate-300 mb-12 leading-relaxed">
-        To receive an invite to the next Jam, you do not need to pay money.<br />
-        You simply need to contribute one "Recipe" or "Experiment."
-        <br/><span class="text-slate-400 text-base mt-2 block">It can be simple. It can even be a failure. We just want to know you tried.</span>
+      <h2 class="text-4xl md:text-6xl font-black mb-8 text-stone-900"><%= t('homepage.join.title') %></h2>
+      <p class="text-2xl font-bold text-stone-800 mb-12 leading-relaxed">
+        <%= t('homepage.join.subtitle_html') %>
+        <br/><span class="text-stone-700 text-lg mt-4 block font-medium bg-white/50 inline-block px-4 py-2 rounded-lg border-2 border-stone-900 transform -rotate-1"><%= t('homepage.join.note') %></span>
       </p>
 
-      <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 text-left">
-        <h3 class="text-2xl font-bold mb-6">Request Invite</h3>
+      <div class="bg-white border-4 border-stone-900 rounded-3xl p-8 md:p-12 text-left shadow-[12px_12px_0px_0px_#1c1917]">
+        <h3 class="text-3xl font-black mb-8"><%= t('homepage.join.form_title') %></h3>
         <form class="space-y-6">
           <div>
-            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-            <input type="email" id="email" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all" placeholder="you@example.com">
+            <label for="email" class="block text-sm font-black text-stone-900 uppercase tracking-wider mb-2"><%= t('homepage.join.email_label') %></label>
+            <input type="email" id="email" class="w-full bg-stone-50 border-2 border-stone-900 rounded-xl px-4 py-4 text-stone-900 font-bold focus:ring-0 focus:shadow-[4px_4px_0px_0px_#1c1917] focus:translate-x-[-2px] focus:translate-y-[-2px] outline-none transition-all" placeholder="you@example.com">
           </div>
 
           <div>
-            <label for="recipe" class="block text-sm font-medium text-slate-300 mb-2">Your Experiment (Success or Failure)</label>
-            <p class="text-xs text-slate-400 mb-3">Don't panic. It can be simple. "I used AI to suggest dinner..."</p>
-            <textarea id="recipe" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all" placeholder="Describe the problem, the tool, and what happened..."></textarea>
+            <label for="recipe" class="block text-sm font-black text-stone-900 uppercase tracking-wider mb-2"><%= t('homepage.join.recipe_label') %></label>
+            <p class="text-xs font-bold text-stone-500 mb-3"><%= t('homepage.join.recipe_hint') %></p>
+            <textarea id="recipe" rows="4" class="w-full bg-stone-50 border-2 border-stone-900 rounded-xl px-4 py-4 text-stone-900 font-bold focus:ring-0 focus:shadow-[4px_4px_0px_0px_#1c1917] focus:translate-x-[-2px] focus:translate-y-[-2px] outline-none transition-all" placeholder="<%= t('homepage.join.recipe_placeholder') %>"></textarea>
           </div>
 
-          <button type="button" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg shadow-indigo-900/50">
-            Submit & Request Invite
+          <button type="button" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-black py-5 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#a8a29e] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#a8a29e] transition-all text-xl uppercase tracking-widest">
+            <%= t('homepage.join.submit') %>
           </button>
         </form>
       </div>
@@ -227,15 +243,15 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-950 text-slate-400 py-12 px-6 border-t border-slate-900">
+  <footer class="bg-stone-900 text-stone-400 py-12 px-6">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="text-sm">
-        &copy; <%= Time.current.year %> AI Jam Community.
+      <div class="text-sm font-bold">
+        &copy; <%= Time.current.year %> <%= t('homepage.footer.copyright') %>
       </div>
-      <div class="flex gap-6">
-        <a href="#" class="hover:text-white transition-colors">About</a>
-        <a href="#" class="hover:text-white transition-colors">Recipes</a>
-        <a href="#" class="hover:text-white transition-colors">Contact</a>
+      <div class="flex gap-6 font-bold">
+        <a href="#" class="hover:text-white transition-colors"><%= t('homepage.footer.about') %></a>
+        <a href="#" class="hover:text-white transition-colors"><%= t('homepage.footer.recipes') %></a>
+        <a href="#" class="hover:text-white transition-colors"><%= t('homepage.footer.contact') %></a>
       </div>
     </div>
   </footer>

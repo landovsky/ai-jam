@@ -1,0 +1,65 @@
+cs:
+  homepage:
+    hero:
+      brand: "AI Jam"
+      badge: "🧪 Živá laboratoř pro AI"
+      title_html: "Přestaňte sledovat. <br class='hidden md:block' />Začněte tvořit."
+      subtitle_html: "Číst o AI nestačí. <br /> Jediný způsob, jak těmto nástrojům porozumět, je <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>používat je</span>."
+      cta_join: "Připojit se k Jamu"
+      cta_how: "Jak to funguje"
+    how_it_works:
+      title: "Jak Jamujeme"
+      subtitle: "Více dělání, méně poslouchání."
+      step_1:
+        title: "1. Download"
+        description: "Rychlý přehled toho, co kdo zkoumá. Žádné dlouhé přednášky, jen signál."
+      step_2:
+        title: "2. Práce"
+        description: "Rozdělíme se do týmů a řešíme konkrétní výzvy. Notebooky otevřené, nástroje běží."
+      step_3:
+        title: "3. Show & Tell"
+        description: "Sdílíme naše zjištění – jak průlomy, tak slepé uličky."
+    who_is_this_for:
+      title: "Pro koho to je?"
+      subtitle: "Jsme mix přátel, kolegů a zvědavých myslí."
+      pragmatist:
+        title: "Pragmatik"
+        description: "Chcete automatizovat nudné části své práce nebo života. Zajímají vás výsledky, ne hype."
+      learner:
+        title: "Student"
+        description: "Jste unaveni z teoretického \"thought leadershipu\" a chcete praktické \"how-to\" znalosti."
+      imposter:
+        title: "\"Podvodník\""
+        description: "Toto je bezpečný prostor. Výslovně vítáme \"selhání\". Všichni na to přicházíme společně."
+    recipes:
+      title: "Galerie Receptů"
+      subtitle: "Skutečné problémy vyřešené skutečnými lidmi."
+      view_all: "Zobrazit všechny recepty"
+      read_recipe: "Číst recept"
+      card_1:
+        title: "Automatizace týdenního jídelníčku"
+        description: "\"Ušetřilo mi to 2 hodiny týdně plánování večeří podle toho, co mám v lednici.\""
+        author: "Petr na AI Jam #4"
+      card_2:
+        title: "Shrnutí klientských e-mailů"
+        description: "\"Automaticky shrnuje dlouhá vlákna do akčních kroků.\""
+        author: "Sarah na AI Jam #2"
+      card_3:
+        title: "Generátor loga kočky"
+        description: "\"Zkoušel jsem vygenerovat logo pro svou kočku, ale pokaždé to vypadalo jako pes.\""
+        author: "Tom na AI Jam #5"
+    join:
+      title: "Cena za vstup je úsilí."
+      subtitle_html: "Abyste dostali pozvánku na další Jam, nemusíte platit peníze.<br /> Stačí přispět jedním \"Receptem\" nebo \"Experimentem.\""
+      note: "Může to být jednoduché. Může to být i selhání. Jen chceme vědět, že jste to zkusili."
+      form_title: "Požádat o pozvánku"
+      email_label: "E-mailová adresa"
+      recipe_label: "Váš experiment (Úspěch nebo Selhání)"
+      recipe_placeholder: "Popište problém, nástroj a co se stalo..."
+      recipe_hint: "Nepanikařte. Může to být jednoduché. \"Použil jsem AI k návrhu večeře...\""
+      submit: "Odeslat a požádat o pozvánku"
+    footer:
+      copyright: "Komunita AI Jam."
+      about: "O nás"
+      recipes: "Recepty"
+      contact: "Kontakt"

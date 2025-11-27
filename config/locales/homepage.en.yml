@@ -1,0 +1,65 @@
+en:
+  homepage:
+    hero:
+      brand: "AI Jam"
+      badge: "🧪 A Living Lab for AI"
+      title_html: "Stop Watching. <br class='hidden md:block' />Start Building."
+      subtitle_html: "Reading about AI is not enough. <br /> The only way to understand these tools is to <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>use them</span>."
+      cta_join: "Join the Jam"
+      cta_how: "How it Works"
+    how_it_works:
+      title: "How We Jam"
+      subtitle: "Maximize doing, minimize listening."
+      step_1:
+        title: "1. The Download"
+        description: "A quick sync on what everyone is currently exploring. No long keynotes, just signal."
+      step_2:
+        title: "2. The Work"
+        description: "We break into squads to tackle specific challenges. Laptops open, tools running."
+      step_3:
+        title: "3. Show & Tell"
+        description: "We share our findings—both the breakthroughs and the roadblocks."
+    who_is_this_for:
+      title: "Who is this for?"
+      subtitle: "We are a mix of friends, colleagues, and curious minds."
+      pragmatist:
+        title: "The Pragmatist"
+        description: "You want to automate the boring parts of your work or life. You care about results, not hype."
+      learner:
+        title: "The Learner"
+        description: "You are tired of theoretical \"thought leadership\" and want practical \"how-to\" knowledge."
+      imposter:
+        title: "The \"Imposter\""
+        description: "This is a safe space. We explicitly welcome \"failures\". We are all figuring this out together."
+    recipes:
+      title: "Recipe Gallery"
+      subtitle: "Real problems solved by real people."
+      view_all: "View all recipes"
+      read_recipe: "Read Recipe"
+      card_1:
+        title: "Automating Weekly Meal Prep"
+        description: "\"Saved me 2 hours/week planning dinners based on what's in my fridge.\""
+        author: "By Petr at AI Jam #4"
+      card_2:
+        title: "Client Email Summarizer"
+        description: "\"Automatically summarizes long threads into action items.\""
+        author: "By Sarah at AI Jam #2"
+      card_3:
+        title: "Cat Logo Generator"
+        description: "\"Tried to generate a logo for my cat, but it looked like a dog every time.\""
+        author: "By Tom at AI Jam #5"
+    join:
+      title: "The Price of Admission is Effort."
+      subtitle_html: "To receive an invite to the next Jam, you do not need to pay money.<br /> You simply need to contribute one \"Recipe\" or \"Experiment.\""
+      note: "It can be simple. It can even be a failure. We just want to know you tried."
+      form_title: "Request Invite"
+      email_label: "Email Address"
+      recipe_label: "Your Experiment (Success or Failure)"
+      recipe_placeholder: "Describe the problem, the tool, and what happened..."
+      recipe_hint: "Don't panic. It can be simple. \"I used AI to suggest dinner...\""
+      submit: "Submit & Request Invite"
+    footer:
+      copyright: "AI Jam Community."
+      about: "About"
+      recipes: "Recipes"
+      contact: "Contact"

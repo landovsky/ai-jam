@@ -1,0 +1,19 @@
+<svg width="120" height="160" viewBox="0 0 120 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Jar Body -->
+  <rect x="20" y="40" width="80" height="100" rx="8" fill="#FEF3C7" stroke="#1c1917" stroke-width="4"/>
+  <!-- Jar Lid -->
+  <rect x="15" y="30" width="90" height="20" rx="4" fill="#F59E0B" stroke="#1c1917" stroke-width="4"/>
+  <!-- Lid Top -->
+  <rect x="18" y="28" width="84" height="6" rx="3" fill="#D97706" stroke="#1c1917" stroke-width="2"/>
+  <!-- Jam Content (orange/apricot) -->
+  <circle cx="60" cy="90" r="25" fill="#F97316" stroke="#1c1917" stroke-width="3"/>
+  <circle cx="55" cy="88" r="6" fill="#FED7AA" stroke="#1c1917" stroke-width="2"/>
+  <circle cx="65" cy="88" r="6" fill="#FED7AA" stroke="#1c1917" stroke-width="2"/>
+  <!-- Jar Label Area -->
+  <rect x="25" y="50" width="70" height="30" rx="2" fill="#FEF3C7" stroke="#1c1917" stroke-width="3" stroke-dasharray="4 4"/>
+  <!-- Label Text "JAM" -->
+  <text x="60" y="72" font-family="Arial Black, sans-serif" font-size="16" font-weight="900" fill="#1c1917" text-anchor="middle">JAM</text>
+  <!-- Jar Rim Shadow -->
+  <rect x="20" y="40" width="80" height="8" rx="8" fill="#FCD34D" opacity="0.6"/>
+</svg>
+
