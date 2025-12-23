@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Script to get execute provided command with given environment variables
+# suppored environments: development, staging, production
+# default environment is development
+
+# Example usage:
+# bin/with_env staging rails credentials:edit
+# will perform the following:
+# RAILS_ENV=staging RAILS_MASTER_KEY=$(cat config/credentials/staging.key) rails credentials:edit
+
+# Check if environment is provided, default to development
+if [ $# -eq 0 ]; then
+    echo "No environment specified, defaulting to development"
+    ENV="development"
+    shift
+else
+    ENV="$1"
+    shift
+fi
+
+# Validate environment
+case "$ENV" in
+    development|staging|production|test)
+        ;;
+    *)
+        echo "Error: Invalid environment '$ENV'. Supported environments: development, staging, production"
+        exit 1
+        ;;
+esac
+
+# Set environment variables
+export RAILS_ENV="$ENV"
+export LOCAL_ENVIRONMENT="true"
+
+# Set RAILS_MASTER_KEY based on environment
+if [ "$ENV" = "development" ]; then
+    # Development typically uses development.key
+    if [ -f "config/credentials/development.key" ]; then
+        export RAILS_MASTER_KEY=$(cat config/credentials/development.key)
+    else
+        echo "Warning: config/credentials/development.key not found"
+    fi
+else
+    # Staging and production use their respective keys
+    if [ -f "config/credentials/${ENV}.key" ]; then
+        export RAILS_MASTER_KEY=$(cat config/credentials/${ENV}.key)
+    else
+        echo "Warning: config/credentials/${ENV}.key not found"
+    fi
+fi
+
+# Check if command is provided
+if [ $# -eq 0 ]; then
+    echo "Error: No command provided"
+    echo "Usage: bin/with_env [environment] <command>"
+    echo "Example: bin/with_env staging bundle exec rake db:migrate"
+    exit 1
+fi
+
+# Execute the provided command
+echo "Executing with RAILS_ENV=$RAILS_ENV"
+echo "               LOCAL_ENVIRONMENT=true"
+exec "$@"
