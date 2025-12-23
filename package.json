@@ -20,5 +20,5 @@
     "@tailwindcss/cli": "^4.1.17",
     "tailwindcss": "^4.1.17"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
