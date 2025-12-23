@@ -3,7 +3,7 @@ en:
     hero:
       brand: "AI Jam"
       badge: "🧪 A Living Lab for AI"
-      title_html: "Stop Watching. <br class='hidden md:block' />Start Building."
+      title_html: "Stop Watching.. <br class='hidden md:block' />Start Building."
       subtitle_html: "Reading about AI is not enough. <br /> The only way to understand these tools is to <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>use them</span>."
       cta_join: "Join the Jam"
       cta_how: "How it Works"
