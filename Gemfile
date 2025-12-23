@@ -12,6 +12,7 @@ ruby File.read('.ruby-version').chomp
 gem 'bootsnap'
 # gem 'globalid', '~> 1.2', '>= 1.2.1'
 gem 'puma'
+gem 'thruster'
 gem 'rack-cors'
 gem 'rails', '~> 8.1'
 gem 'route_translator', '~> 15.2'
