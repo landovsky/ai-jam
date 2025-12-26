@@ -7,6 +7,7 @@ ruby File.read('.ruby-version').chomp
 # gem 'bcrypt'
 # gem 'cancancan'
 # gem 'devise'
+gem 'sops_rails', path: '../../gems/sops_rails'
 
 ## Rails
 gem 'bootsnap'
