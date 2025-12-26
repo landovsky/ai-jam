@@ -505,3 +505,4 @@ Use Tailwind's default breakpoints:
 ---
 
 *Last updated: Based on homepage implementation and community philosophy*
+
