@@ -1,0 +1,12 @@
+---
+creation_rules:
+- path_regex: config/credentials(\..*)?\.yaml\.enc$
+  age:
+  - age1jpxh5yjmd2lkdz2593j0vp46l8s4wjccqr46z3qa5texdwfle43qxcd0re # Tom
+  - age1lyvtwkdjhvxs5uy824ntu9vznmh0p662hlusahn4894ecumsxghqu4prgv # K3s cluster
+- path_regex: "\\.env(\\..*)?\\.enc$"
+  age:
+  - age1jpxh5yjmd2lkdz2593j0vp46l8s4wjccqr46z3qa5texdwfle43qxcd0re # Tom
+  - age1lyvtwkdjhvxs5uy824ntu9vznmh0p662hlusahn4894ecumsxghqu4prgv # K3s cluster
+- path_regex: ".*"
+  age: ''

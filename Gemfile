@@ -7,7 +7,8 @@ ruby File.read('.ruby-version').chomp
 # gem 'bcrypt'
 # gem 'cancancan'
 # gem 'devise'
-gem 'sops_rails', path: '../../gems/sops_rails'
+# gem 'sops_rails', path: '../../gems/sops_rails'
+gem 'sops_rails', git: 'https://github.com/landovsky/sops-rails-gem.git', branch: 'main'
 
 ## Rails
 gem 'bootsnap'

@@ -1,5 +1,7 @@
-PATH
-  remote: ../../gems/sops_rails
+GIT
+  remote: https://github.com/landovsky/sops-rails-gem.git
+  revision: 504da6366e55a29007d6d6b849b862c1c53eb7d3
+  branch: main
   specs:
     sops_rails (0.1.0)
       rails (>= 7.0)
@@ -211,7 +213,7 @@ GEM
     mini_magick (5.3.1)
       logger
     mini_mime (1.1.5)
-    minitest (6.0.0)
+    minitest (6.0.1)
       prism (~> 1.5)
     msgpack (1.8.0)
     multi_xml (0.7.2)
