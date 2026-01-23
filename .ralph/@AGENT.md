@@ -23,7 +23,7 @@
 - `ruby-openai` - OpenAI integration
 - `sentry-rails` - Error tracking
 
-## Rails project best practices
+**Rails project best practices**
 - follow well known Rails practices and conventions
 - maintain lean models and controllers
 - **Service Objects**: Use ActiveInteraction for all business operations
@@ -157,6 +157,9 @@ bin/kamal details
 - Update this section when you learn new build optimizations
 - Document any gotchas or special setup requirements
 - Keep track of the fastest test/build cycle
+
+## Visual guideline
+Follow docs/style-guide.md - a comprehensive design system for building consistent, on-brand pages for the AI Jam community.
 
 ## Feature Development Quality Standards
 
