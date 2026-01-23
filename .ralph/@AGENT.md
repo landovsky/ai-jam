@@ -1,43 +1,156 @@
 # Agent Build Instructions
 
+## Tech Stack Overview
+
+**Backend:**
+- Ruby (see `.ruby-version`)
+- Rails 8.1
+- SQLite3 database
+- Puma web server with Thruster
+- Solid Queue for background jobs
+
+**Frontend:**
+- Hotwire (Turbo + Stimulus)
+- Tailwind CSS v4
+- Slim templates
+- ESBuild for JavaScript bundling
+- Sprockets asset pipeline
+
+**Key Gems:**
+- `active_interaction` - Service objects
+- `draper` - Decorators
+- `jsonapi-serializer` - JSON API serialization
+- `ruby-openai` - OpenAI integration
+- `sentry-rails` - Error tracking
+
+## Rails project best practices
+- follow well known Rails practices and conventions
+- maintain lean models and controllers
+- **Service Objects**: Use ActiveInteraction for all business operations
+- **Component-Based UI**: ViewComponents for all views, no traditional view templates
+- **Progressive Enhancement**: Stimulus for JavaScript behavior, Turbo for navigation
+
 ## Project Setup
+
 ```bash
-# Install dependencies (example for Node.js project)
+# Install Ruby dependencies
+bundle install
+
+# Install JavaScript dependencies
 npm install
 
-# Or for Python project
-pip install -r requirements.txt
+# Setup database
+bin/rails db:setup
 
-# Or for Rust project  
-cargo build
+# Or reset database (drops, creates, migrates, seeds)
+bin/rails db:reset
+```
+
+## Running the Application
+
+```bash
+# Start development server (Rails + asset watchers)
+bin/dev
+
+# Or start Rails server only
+bin/rails server
 ```
 
 ## Running Tests
+
 ```bash
-# Node.js
-npm test
+# Run all RSpec tests
+bundle exec rspec
 
-# Python
-pytest
+# Run specific test file
+bundle exec rspec spec/models/recipe_spec.rb
 
-# Rust
-cargo test
+# Run tests with coverage
+COVERAGE=true bundle exec rspec
+
+# Run system tests (Capybara + Selenium)
+bundle exec rspec spec/system/
 ```
 
 ## Build Commands
+
 ```bash
-# Production build
+# Build JavaScript assets
 npm run build
-# or
-cargo build --release
+
+# Build CSS (Tailwind)
+npm run build:css
+
+# Precompile all assets for production
+bin/rails assets:precompile
 ```
 
-## Development Server
+## Code Quality
+
 ```bash
-# Start development server
-npm run dev
-# or
-cargo run
+# Run RuboCop linter
+bin/rubocop
+
+# Auto-fix RuboCop offenses
+bin/rubocop -A
+
+# Run Brakeman security scanner
+bin/brakeman
+
+# Run bundler-audit for gem vulnerabilities
+bin/bundler-audit
+```
+
+## Database Commands
+
+```bash
+# Run migrations
+bin/rails db:migrate
+
+# Rollback last migration
+bin/rails db:rollback
+
+# Check migration status
+bin/rails db:migrate:status
+
+# Rails console
+bin/rails console
+```
+
+## Background Jobs
+
+```bash
+# Start Solid Queue worker
+bin/jobs
+
+# Or via Rails
+bin/rails solid_queue:start
+```
+
+## Release Management
+
+```bash
+# Dry run release
+npm run release:dry
+
+# Patch release (0.0.x)
+npm run release:patch
+
+# Minor release (0.x.0)
+npm run release:minor
+
+# Major release (x.0.0)
+npm run release:major
+```
+
+## Deployment
+
+```bash
+# Deploy with Kamal
+bin/kamal deploy
+
+# Check deployment status
+bin/kamal details
 ```
 
 ## Key Learnings
@@ -54,18 +167,25 @@ cargo run
 - **Minimum Coverage**: 85% code coverage ratio required for all new code
 - **Test Pass Rate**: 100% - all tests must pass, no exceptions
 - **Test Types Required**:
-  - Unit tests for all business logic and services
-  - Integration tests for API endpoints or main functionality
-  - End-to-end tests for critical user workflows
+  - Unit tests for models and services (`spec/models/`, `spec/services/`)
+  - Request specs for API endpoints (`spec/requests/`)
+  - System tests for critical user workflows (`spec/system/`)
 - **Coverage Validation**: Run coverage reports before marking features complete:
   ```bash
-  # Examples by language/framework
-  npm run test:coverage
-  pytest --cov=src tests/ --cov-report=term-missing
-  cargo tarpaulin --out Html
+  COVERAGE=true bundle exec rspec
   ```
 - **Test Quality**: Tests must validate behavior, not just achieve coverage metrics
 - **Test Documentation**: Complex test scenarios must include comments explaining the test strategy
+
+### Testing Tools
+
+- **RSpec** - Test framework
+- **Factory Bot** - Test data factories (`spec/factories/`)
+- **FFaker** - Fake data generation
+- **Shoulda Matchers** - One-liner model tests
+- **Capybara** - System test DSL
+- **Selenium WebDriver** - Browser automation
+- **Database Cleaner** - Test isolation
 
 ### Git Workflow Requirements
 
@@ -104,7 +224,7 @@ Before moving to the next feature, ALL changes must be:
 **ALL implementation documentation MUST remain synchronized with the codebase**:
 
 1. **Code Documentation**:
-   - Language-appropriate documentation (JSDoc, docstrings, etc.)
+   - YARD documentation for public methods
    - Update inline comments when implementation changes
    - Remove outdated comments immediately
 
@@ -130,11 +250,11 @@ Before moving to the next feature, ALL changes must be:
 
 Before marking ANY feature as complete, verify:
 
-- [ ] All tests pass with appropriate framework command
+- [ ] All RSpec tests pass (`bundle exec rspec`)
 - [ ] Code coverage meets 85% minimum threshold
 - [ ] Coverage report reviewed for meaningful test quality
-- [ ] Code formatted according to project standards
-- [ ] Type checking passes (if applicable)
+- [ ] RuboCop passes (`bin/rubocop`)
+- [ ] Brakeman shows no new security issues (`bin/brakeman`)
 - [ ] All changes committed with conventional commit messages
 - [ ] All commits pushed to remote repository
 - [ ] .ralph/@fix_plan.md task marked as complete
