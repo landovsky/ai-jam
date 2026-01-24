@@ -7,6 +7,8 @@
 * **Description:** As an anonymous user, I want to sign up through a flow that collects my interests before my credentials.
 * **Motivation:** Leading with "Interests" provides immediate personal value and reduces friction during the signup process.
 * **Acceptance Criteria:**
+- [ ] onboarding is initiated from homepage
+- [ ] current section "The Price of Admission is Effort" of homepage is replaced with new copy inviting to sign-up.
 * [ ] **Step 1:** Users select/input AI interests or tools they use.
 * [ ] **Step 2:** User creates an account (Email/Password).
 * [ ] **Step 3:** User provides a short personal/professional bio.

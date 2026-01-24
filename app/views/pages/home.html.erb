@@ -36,9 +36,7 @@
         <%= t('homepage.hero.subtitle_html') %>
       </p>
       <div class="flex flex-col md:flex-row justify-center gap-6">
-        <a href="#join" class="bg-orange-500 text-white font-black py-4 px-10 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl">
-          <%= t('homepage.hero.cta_join') %>
-        </a>
+        <%= link_to t('homepage.hero.cta_join'), step1_onboarding_index_path, class: "bg-orange-500 text-white font-black py-4 px-10 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl" %>
         <a href="#how-it-works" class="bg-white text-stone-900 font-black py-4 px-10 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl">
           <%= t('homepage.hero.cta_how') %>
         </a>
@@ -220,24 +218,8 @@
         <br/><span class="text-stone-700 text-lg mt-4 block font-medium bg-white/50 inline-block px-4 py-2 rounded-lg border-2 border-stone-900 transform -rotate-1"><%= t('homepage.join.note') %></span>
       </p>
 
-      <div class="bg-white border-4 border-stone-900 rounded-3xl p-8 md:p-12 text-left shadow-[12px_12px_0px_0px_#1c1917]">
-        <h3 class="text-3xl font-black mb-8"><%= t('homepage.join.form_title') %></h3>
-        <form class="space-y-6">
-          <div>
-            <label for="email" class="block text-sm font-black text-stone-900 uppercase tracking-wider mb-2"><%= t('homepage.join.email_label') %></label>
-            <input type="email" id="email" class="w-full bg-stone-50 border-2 border-stone-900 rounded-xl px-4 py-4 text-stone-900 font-bold focus:ring-0 focus:shadow-[4px_4px_0px_0px_#1c1917] focus:translate-x-[-2px] focus:translate-y-[-2px] outline-none transition-all" placeholder="you@example.com">
-          </div>
-
-          <div>
-            <label for="recipe" class="block text-sm font-black text-stone-900 uppercase tracking-wider mb-2"><%= t('homepage.join.recipe_label') %></label>
-            <p class="text-xs font-bold text-stone-500 mb-3"><%= t('homepage.join.recipe_hint') %></p>
-            <textarea id="recipe" rows="4" class="w-full bg-stone-50 border-2 border-stone-900 rounded-xl px-4 py-4 text-stone-900 font-bold focus:ring-0 focus:shadow-[4px_4px_0px_0px_#1c1917] focus:translate-x-[-2px] focus:translate-y-[-2px] outline-none transition-all" placeholder="<%= t('homepage.join.recipe_placeholder') %>"></textarea>
-          </div>
-
-          <button type="button" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-black py-5 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#a8a29e] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#a8a29e] transition-all text-xl uppercase tracking-widest">
-            <%= t('homepage.join.submit') %>
-          </button>
-        </form>
+      <div class="bg-white border-4 border-stone-900 rounded-3xl p-8 md:p-12 text-center shadow-[12px_12px_0px_0px_#1c1917]">
+        <%= link_to t('homepage.join.cta_start'), step1_onboarding_index_path, class: "bg-stone-900 hover:bg-stone-800 text-white font-black py-5 px-12 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#a8a29e] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#a8a29e] transition-all text-xl uppercase tracking-widest inline-block" %>
       </div>
     </div>
   </section>

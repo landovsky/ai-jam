@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_11_27_124207) do
+ActiveRecord::Schema[8.1].define(version: 2026_01_24_215034) do
+  create_table "attendances", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.integer "jam_session_id", null: false
+    t.string "role"
+    t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["jam_session_id"], name: "index_attendances_on_jam_session_id"
+    t.index ["user_id"], name: "index_attendances_on_user_id"
+  end
+
   create_table "authors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "name"
@@ -39,4 +49,17 @@ ActiveRecord::Schema[8.1].define(version: 2025_11_27_124207) do
     t.index ["author_id"], name: "index_recipes_on_author_id"
     t.index ["jam_session_id"], name: "index_recipes_on_jam_session_id"
   end
+
+  create_table "users", force: :cascade do |t|
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.string "email"
+    t.json "interests"
+    t.string "password_digest"
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email"
+  end
+
+  add_foreign_key "attendances", "jam_sessions"
+  add_foreign_key "attendances", "users"
 end

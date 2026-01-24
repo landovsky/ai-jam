@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby File.read('.ruby-version').chomp
 
 ## Authentication, authorization & friends
-# gem 'bcrypt'
+gem 'bcrypt'
 # gem 'cancancan'
 # gem 'devise'
 # gem 'sops_rails', path: '../../gems/sops_rails'
@@ -112,7 +112,7 @@ group :test do
   gem 'database_cleaner', '~> 2.1'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
+  # gem 'webdrivers'
 end
 
 ## Miscellaneous

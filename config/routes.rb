@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get "sessions/new"
+  get "sessions/create"
+  get "sessions/destroy"
+  get "onboarding/step1"
+  get "onboarding/step2"
+  get "onboarding/step3"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -12,5 +18,20 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   scope "(:locale)", locale: /en|cs/ do
     root "pages#home"
+
+    resources :onboarding, only: [] do
+      collection do
+        get :step1
+        post :save_step1
+        get :step2
+        post :save_step2
+        get :step3
+        patch :save_step3
+      end
+    end
+
+    get 'login', to: 'sessions#new'
+    post 'login', to: 'sessions#create'
+    delete 'logout', to: 'sessions#destroy'
   end
 end
