@@ -1,0 +1,67 @@
+<div class="bg-amber-50 min-h-screen font-sans text-stone-900 selection:bg-orange-300 selection:text-stone-900">
+  <!-- Language Switcher -->
+  <div class="absolute top-6 right-6 z-20 flex gap-3">
+    <%= link_to "EN", recipes_path(locale: :en, q: params[:q], tag: params[:tag]), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :en ? 'bg-orange-300' : ''}" %>
+    <%= link_to "CS", recipes_path(locale: :cs, q: params[:q], tag: params[:tag]), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :cs ? 'bg-orange-300' : ''}" %>
+  </div>
+
+  <!-- Header Section -->
+  <section class="relative bg-amber-100 text-stone-900 py-24 px-6 overflow-hidden border-b-4 border-stone-900">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1c1917_2px,transparent_2px)] [background-size:24px_24px] z-0"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 text-stone-900 drop-shadow-sm leading-tight">
+          <%= t('recipes.index.title') %>
+        </h1>
+        <p class="text-xl md:text-2xl font-bold text-stone-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <%= t('recipes.index.subtitle') %>
+        </p>
+        <% if signed_in? %>
+          <%= link_to t('recipes.index.create_recipe'), new_recipe_path, class: "bg-orange-500 text-white font-black py-4 px-10 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl" %>
+        <% end %>
+      </div>
+
+      <!-- Search and Filter Form -->
+      <%= render 'search_form' %>
+    </div>
+  </section>
+
+  <!-- Recipes Grid Section -->
+  <section class="py-24 px-6 bg-white border-b-4 border-stone-900">
+    <div class="max-w-6xl mx-auto">
+      <% if @recipes.any? %>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <% @recipes.each do |recipe| %>
+            <%= render 'recipe_card', recipe: recipe %>
+          <% end %>
+        </div>
+      <% else %>
+        <!-- Empty State -->
+        <div class="text-center py-20">
+          <div class="w-32 h-32 mx-auto bg-amber-100 rounded-full flex items-center justify-center mb-8 border-4 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917]">
+            <div class="text-6xl">🔍</div>
+          </div>
+          <h3 class="text-3xl font-black mb-4 text-stone-900"><%= t('recipes.index.no_results') %></h3>
+          <p class="text-xl font-medium text-stone-600 mb-8"><%= t('recipes.index.no_results_hint') %></p>
+          <%= link_to t('recipes.index.clear_filters'), recipes_path, class: "bg-stone-900 text-white font-black py-3 px-8 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#a8a29e] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#a8a29e] transition-all text-lg" %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-sm font-bold">
+        &copy; <%= Time.current.year %> <%= t('homepage.footer.copyright') %>
+      </div>
+      <div class="flex gap-6 font-bold">
+        <%= link_to t('homepage.footer.about'), root_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('homepage.footer.recipes'), recipes_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('homepage.footer.contact'), root_path, class: "hover:text-white transition-colors" %>
+      </div>
+    </div>
+  </footer>
+</div>

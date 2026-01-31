@@ -139,9 +139,9 @@
           <h2 class="text-4xl md:text-5xl font-black mb-4 text-stone-900"><%= t('homepage.recipes.title') %></h2>
           <p class="text-xl font-bold text-stone-600"><%= t('homepage.recipes.subtitle') %></p>
         </div>
-        <a href="#" class="inline-flex items-center text-stone-900 font-bold hover:text-orange-600 transition-colors text-lg border-b-2 border-stone-900">
+        <%= link_to recipes_path, class: "inline-flex items-center text-stone-900 font-bold hover:text-orange-600 transition-colors text-lg border-b-2 border-stone-900" do %>
           <%= t('homepage.recipes.view_all') %> <span aria-hidden="true" class="ml-2">&rarr;</span>
-        </a>
+        <% end %>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
