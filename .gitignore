@@ -43,3 +43,6 @@
 .env*.local
 *.decrypted.*
 tmp/secrets/
+
+# Beads
+.beads/export-state/*
