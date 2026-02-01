@@ -1,0 +1,60 @@
+<div class="bg-white border-4 border-stone-900 rounded-3xl p-8 shadow-[12px_12px_0px_0px_#1c1917]">
+  <%= form_with url: recipes_path, method: :get, local: true, class: "space-y-6" do |f| %>
+    <!-- Search Input -->
+    <div>
+      <label class="block text-sm font-black text-stone-900 uppercase tracking-wider mb-2">
+        <%= t('recipes.search.query_label') %>
+      </label>
+      <%= f.text_field :q, value: params[:q], placeholder: t('recipes.search.query_placeholder'), class: "w-full bg-stone-50 border-2 border-stone-900 rounded-xl px-4 py-4 text-stone-900 font-bold focus:ring-0 focus:shadow-[4px_4px_0px_0px_#1c1917] focus:translate-x-[-2px] focus:translate-y-[-2px] outline-none transition-all" %>
+    </div>
+
+    <!-- Active Filters Display -->
+    <% if params[:tag].present? || params[:q].present? %>
+      <div class="flex flex-wrap gap-3 items-center">
+        <span class="text-sm font-black text-stone-900 uppercase tracking-wider">
+          <%= t('recipes.search.active_filters') %>:
+        </span>
+        <% if params[:q].present? %>
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
+            <span><%= t('recipes.search.search') %>: "<%= params[:q] %>"</span>
+            <%= link_to recipes_path(tag: params[:tag]), class: "hover:text-orange-600" do %>
+              ✕
+            <% end %>
+          </div>
+        <% end %>
+        <% if params[:tag].present? %>
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-purple-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
+            <span>#<%= params[:tag] %></span>
+            <%= link_to recipes_path(q: params[:q]), class: "hover:text-orange-600" do %>
+              ✕
+            <% end %>
+          </div>
+        <% end %>
+        <%= link_to t('recipes.search.clear_all'), recipes_path, class: "text-xs font-bold text-stone-600 hover:text-stone-900 underline" %>
+      </div>
+    <% end %>
+
+    <!-- Tag Filter -->
+    <% if @available_tags.any? %>
+      <div>
+        <label class="block text-sm font-black text-stone-900 uppercase tracking-wider mb-3">
+          <%= t('recipes.search.filter_by_tag') %>
+        </label>
+        <div class="flex flex-wrap gap-2">
+          <% @available_tags.each do |tag| %>
+            <% if params[:tag] == tag %>
+              <%= link_to "##{tag}", recipes_path(q: params[:q]), class: "px-3 py-1 bg-orange-300 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1c1917] transition-all" %>
+            <% else %>
+              <%= link_to "##{tag}", recipes_path(q: params[:q], tag: tag), class: "px-3 py-1 bg-white border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1c1917] transition-all" %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <!-- Submit Button -->
+    <div>
+      <%= f.submit t('recipes.search.submit'), class: "w-full bg-stone-900 hover:bg-stone-800 text-white font-black py-4 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#a8a29e] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#a8a29e] transition-all text-lg uppercase tracking-widest" %>
+    </div>
+  <% end %>
+</div>

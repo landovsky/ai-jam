@@ -1,0 +1,64 @@
+cs:
+  recipes:
+    anonymous: "Anonymní"
+    read_recipe: "Přečíst Recept →"
+    draft: "Koncept"
+    created: "Recept byl úspěšně vytvořen!"
+    updated: "Recept byl úspěšně aktualizován!"
+
+    errors:
+      not_published: "Tento recept ještě není publikován."
+      unauthorized: "Nemáte oprávnění upravovat tento recept."
+
+    index:
+      title: "Živá Kniha Receptů"
+      subtitle: "Procházejte naši sbírku AI experimentů, pracovních postupů a znalostí z komunity."
+      create_recipe: "Sdílet Váš Recept"
+      no_results: "Nebyly nalezeny žádné recepty"
+      no_results_hint: "Zkuste upravit vyhledávání nebo filtry"
+      clear_filters: "Vymazat Filtry"
+
+    search:
+      query_label: "Hledat Recepty"
+      query_placeholder: "Hledat podle názvu nebo obsahu..."
+      filter_by_tag: "Filtrovat podle Tagu"
+      active_filters: "Aktivní Filtry"
+      search: "Hledat"
+      clear_all: "Vymazat vše"
+      submit: "Hledat"
+
+    show:
+      back_to_recipes: "Zpět na Recepty"
+      by: "Od:"
+      session: "Sezení:"
+      edit_recipe: "Upravit Recept"
+
+    new:
+      title: "Sdílet Váš Recept"
+      subtitle: "Zdokumentujte svůj AI experiment nebo pracovní postup pro komunitu"
+
+    edit:
+      title: "Upravit Recept"
+      back_to_recipe: "Zpět na Recept"
+
+    form:
+      errors_header:
+        one: "%{count} chyba zabránila uložení tohoto receptu:"
+        other: "%{count} chyby zabránily uložení tohoto receptu:"
+      title_label: "Název Receptu"
+      title_placeholder: "např., Automatizace týdenních reportů s ChatGPT"
+      content_label: "Obsah Receptu"
+      content_placeholder: "Popište problém, váš pracovní postup, použité nástroje a verdikt. Co fungovalo? Co ne?"
+      content_hint: "Sdílejte detaily, které by pomohly někomu jinému reprodukovat vaši práci"
+      image_label: "Ikona Receptu (Emoji)"
+      image_placeholder: "🗄️"
+      image_hint: "Vyberte emoji, které představuje váš recept"
+      tags_label: "Tagy"
+      tags_placeholder: "Database, Claude, Automation"
+      tags_hint: "Oddělte tagy čárkami"
+      jam_session_label: "Jam Sezení (Volitelné)"
+      jam_session_blank: "Žádné"
+      published_label: "Publikovat tento recept"
+      published_hint: "Publikované recepty jsou viditelné pro všechny. Koncepty jsou viditelné pouze pro vás."
+      submit: "Uložit Recept"
+      cancel: "Zrušit"

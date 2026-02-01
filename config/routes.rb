@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|cs/ do
     root "pages#home"
 
+    resources :recipes, only: [:index, :show, :new, :create, :edit, :update]
+
     resources :onboarding, only: [] do
       collection do
         get :step1

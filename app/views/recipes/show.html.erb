@@ -1,0 +1,113 @@
+<div class="bg-amber-50 min-h-screen font-sans text-stone-900 selection:bg-orange-300 selection:text-stone-900">
+  <!-- Language Switcher -->
+  <div class="absolute top-6 right-6 z-20 flex gap-3">
+    <%= link_to "EN", recipe_path(@recipe, locale: :en), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :en ? 'bg-orange-300' : ''}" %>
+    <%= link_to "CS", recipe_path(@recipe, locale: :cs), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :cs ? 'bg-orange-300' : ''}" %>
+  </div>
+
+  <!-- Back Navigation -->
+  <div class="py-6 px-6 bg-white border-b-2 border-stone-900">
+    <div class="max-w-4xl mx-auto">
+      <%= link_to recipes_path, class: "inline-flex items-center text-stone-900 font-bold hover:text-orange-600 transition-colors" do %>
+        <span aria-hidden="true" class="mr-2">&larr;</span>
+        <%= t('recipes.show.back_to_recipes') %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Recipe Hero Section -->
+  <section class="relative bg-amber-100 text-stone-900 py-24 px-6 overflow-hidden border-b-4 border-stone-900">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1c1917_2px,transparent_2px)] [background-size:24px_24px] z-0"></div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+      <!-- Draft Badge -->
+      <% if !@recipe.published? %>
+        <div class="mb-6 text-center">
+          <span class="inline-block px-4 py-2 bg-amber-200 border-2 border-stone-900 text-stone-900 text-sm font-black rounded-lg shadow-[4px_4px_0px_0px_#1c1917] uppercase tracking-wider">
+            <%= t('recipes.draft') %>
+          </span>
+        </div>
+      <% end %>
+
+      <!-- Recipe Icon/Image -->
+      <div class="w-40 h-40 mx-auto bg-white rounded-full flex items-center justify-center mb-8 border-4 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917]">
+        <% if @recipe.image.present? %>
+          <div class="text-8xl"><%= @recipe.image %></div>
+        <% else %>
+          <div class="text-8xl">📝</div>
+        <% end %>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 text-stone-900 drop-shadow-sm leading-tight text-center">
+        <%= @recipe.title %>
+      </h1>
+
+      <!-- Meta Information -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <!-- Author -->
+        <div class="px-4 py-2 bg-white border-2 border-stone-900 rounded-xl shadow-[4px_4px_0px_0px_#1c1917] font-bold text-sm">
+          <span class="text-stone-600"><%= t('recipes.show.by') %></span>
+          <% if @recipe.author.present? %>
+            <%= @recipe.author.name %>
+          <% else %>
+            <%= t('recipes.anonymous') %>
+          <% end %>
+        </div>
+
+        <!-- Jam Session -->
+        <% if @recipe.jam_session.present? %>
+          <div class="px-4 py-2 bg-white border-2 border-stone-900 rounded-xl shadow-[4px_4px_0px_0px_#1c1917] font-bold text-sm">
+            <span class="text-stone-600"><%= t('recipes.show.session') %></span>
+            <%= @recipe.jam_session.title %>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- Tags -->
+      <% if @recipe.tags.present? %>
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          <% @recipe.tags.each_with_index do |tag, index| %>
+            <% colors = ['bg-white', 'bg-purple-200', 'bg-green-200', 'bg-yellow-200', 'bg-orange-200'] %>
+            <%= link_to recipes_path(tag: tag), class: "px-3 py-1 #{colors[index % colors.length]} border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1c1917] transition-all" do %>
+              #<%= tag %>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+
+      <!-- Edit Button (only for authorized users) -->
+      <% if signed_in? && current_user.can_edit_recipe?(@recipe) %>
+        <div class="text-center">
+          <%= link_to t('recipes.show.edit_recipe'), edit_recipe_path(@recipe), class: "bg-orange-500 text-white font-black py-3 px-8 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-lg" %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <!-- Recipe Content Section -->
+  <section class="py-24 px-6 bg-white border-b-4 border-stone-900">
+    <div class="max-w-3xl mx-auto">
+      <div class="prose prose-stone max-w-none">
+        <div class="text-lg font-medium text-stone-700 leading-relaxed whitespace-pre-wrap">
+          <%= @recipe.content %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-sm font-bold">
+        &copy; <%= Time.current.year %> <%= t('homepage.footer.copyright') %>
+      </div>
+      <div class="flex gap-6 font-bold">
+        <%= link_to t('homepage.footer.about'), root_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('homepage.footer.recipes'), recipes_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('homepage.footer.contact'), root_path, class: "hover:text-white transition-colors" %>
+      </div>
+    </div>
+  </footer>
+</div>
