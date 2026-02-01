@@ -117,3 +117,32 @@ This document captures insights from past implementations to improve future work
 
 - `/Users/tomas/git/projects/ai-jam/docs/style-guide.md` - All new views (capacity indicators, waitlist UI) follow brutalist design system
 - I18n complete with proper Czech pluralization (one/few/other) in both locale files
+
+---
+
+## 2026-02-01 - ai-jam-4z5 - Past Event Engagement Feature
+
+### What worked well
+
+- **Instance method mirroring scope logic** in `/Users/tomas/git/projects/ai-jam/app/models/jam_session.rb`: The `past?` instance method (`held_on < Date.today`) exactly mirrors the `past` scope's WHERE clause. This ensures consistent behavior between querying past events and checking individual events. Always keep instance predicates aligned with scope conditions.
+
+- **Early return for validation in controller** in `/Users/tomas/git/projects/ai-jam/app/controllers/attendances_controller.rb` lines 7-12: The past event validation happens BEFORE the transaction block with an explicit `return` after redirect. This prevents unnecessary database locking when the request will be rejected anyway.
+
+- **Conditional instance variable loading** in `/Users/tomas/git/projects/ai-jam/app/controllers/jam_sessions_controller.rb` lines 27-31: Only loading `@published_recipes` and checking `@has_upcoming_events` when `@jam_session.past?` avoids unnecessary database queries for upcoming events. Pattern: load data lazily based on view requirements.
+
+- **Reusing existing partial patterns**: The engagement card in `_past_event_engagement.html.slim` follows the exact structure and styling from `_locked_profile_message.html.slim`, ensuring visual consistency. When the plan references a pattern file, actually read and follow it.
+
+### What to avoid
+
+- **Relying on nil-safe short-circuit evaluation** - The view uses `@jam_session.past? && @published_recipes.any?` which works only because Ruby short-circuits. If someone refactors to check `.any?` first, it would raise NoMethodError when `@published_recipes` is nil (for non-past events). More defensive: initialize to empty collection or use explicit `if @jam_session.past?` wrapper.
+
+### Process improvements
+
+- **Plan should flag security validation gaps explicitly** - The plan correctly identified the backend security hole where RSVP could be POSTed to past events. Future specs should include a "Security Considerations" section that flags controller actions missing input validation for business rule constraints.
+
+- **When spec says "engagement card" similar to existing pattern** - Planner should include the exact file path of the pattern to copy. This implementation correctly referenced `/Users/tomas/git/projects/ai-jam/app/views/shared/_locked_profile_message.html.slim`. Reviewers should verify the pattern was actually followed.
+
+### Artifacts referenced
+
+- `/Users/tomas/git/projects/ai-jam/docs/style-guide.md` - Engagement card follows brutalist design (p-12, rounded-3xl, border-4, shadow patterns)
+- I18n complete in both locales with translations for event_ended, recipes_from_event, and attendances.event_ended
