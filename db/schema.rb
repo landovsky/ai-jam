@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_01_052922) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_01_053641) do
   create_table "attendances", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.integer "jam_session_id", null: false
+    t.datetime "promoted_at"
     t.string "role"
+    t.string "status", default: "attending", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
+    t.integer "waitlist_position"
+    t.index ["jam_session_id", "status", "waitlist_position"], name: "index_attendances_on_waitlist"
     t.index ["jam_session_id"], name: "index_attendances_on_jam_session_id"
     t.index ["user_id", "jam_session_id"], name: "index_attendances_on_user_and_jam_session", unique: true
     t.index ["user_id"], name: "index_attendances_on_user_id"
@@ -31,6 +35,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_01_052922) do
   end
 
   create_table "jam_sessions", force: :cascade do |t|
+    t.integer "capacity"
     t.text "content"
     t.datetime "created_at", null: false
     t.date "held_on"
