@@ -36,7 +36,7 @@
             - if @current_attendance
               / Show status based on attendance type
               - if @current_attendance.status_waitlisted?
-                .mb-6.p-6.rounded-xl.bg-amber-100.border-2.border-stone-900.shadow-[4px_4px_0px_0px_#1c1917]
+                div class="mb-6 p-6 rounded-xl bg-amber-100 border-2 border-stone-900 shadow-[4px_4px_0px_0px_#1c1917]"
                   p.text-lg.font-bold.text-stone-900.mb-2
                     = t('jam_sessions.show.on_waitlist')
                   p.text-sm.font-medium.text-stone-700
@@ -62,7 +62,7 @@
   - if @jam_session.content.present?
     section.py-24.px-6.bg-amber-50.border-b-4.border-stone-900
       .max-w-3xl.mx-auto
-        .p-8.rounded-3xl.bg-white.border-4.border-stone-900.shadow-[12px_12px_0px_0px_#1c1917]
+        div class="p-8 rounded-3xl bg-white border-4 border-stone-900 shadow-[12px_12px_0px_0px_#1c1917]"
           .text-lg.font-medium.text-stone-700.leading-relaxed
             = simple_format(@jam_session.content)
 
@@ -80,7 +80,7 @@
           - @attendees.each do |attendee|
             = render 'shared/user_card', user: attendee, viewer: current_user, jam_session: @jam_session
       - else
-        .text-center.p-12.rounded-3xl.bg-amber-50.border-2.border-stone-900.shadow-[8px_8px_0px_0px_#1c1917]
+        div class="text-center p-12 rounded-3xl bg-amber-50 border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917]"
           p.text-xl.font-bold.text-stone-600
             = t('jam_sessions.show.no_attendees')
 

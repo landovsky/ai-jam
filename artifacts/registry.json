@@ -8,5 +8,10 @@
     "filename": "docs/style-guide.md",
     "description": "Comprehensive design system defining brutalist-inspired visual language, components, and patterns for all AI Jam pages",
     "usage": "decide"
+  },
+  {
+    "filename": "artifacts/front-end.md",
+    "description": "Front-end development rules for Slim templates, especially CSS bracket notation syntax requirements",
+    "usage": "always"
   }
 ]
