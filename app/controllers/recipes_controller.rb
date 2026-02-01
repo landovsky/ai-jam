@@ -92,6 +92,8 @@ class RecipesController < ApplicationController
     # Convert comma-separated tags string to array
     if recipe_params[:tags].present?
       recipe_params[:tags] = recipe_params[:tags].split(',').map(&:strip).reject(&:blank?)
+    else
+      recipe_params[:tags] = []
     end
 
     recipe_params

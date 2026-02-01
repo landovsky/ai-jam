@@ -5,9 +5,9 @@ RSpec.describe 'Recipe Management', type: :system do
     driven_by(:selenium, using: :headless_chrome)
   end
 
-  let!(:admin) { create(:user, email: 'admin@test.com', password: 'password', role: :admin) }
-  let!(:topic_manager) { create(:user, email: 'manager@test.com', password: 'password', role: :topic_manager) }
-  let!(:member) { create(:user, email: 'member@test.com', password: 'password', role: :member) }
+  let!(:admin) { create(:user, email: 'admin@test.com', password: 'password', password_confirmation: 'password', role: :admin) }
+  let!(:topic_manager) { create(:user, email: 'manager@test.com', password: 'password', password_confirmation: 'password', role: :topic_manager) }
+  let!(:member) { create(:user, email: 'member@test.com', password: 'password', password_confirmation: 'password', role: :member) }
 
   let!(:admin_author) { create(:author, name: 'Admin Author', user: admin) }
   let!(:member_author) { create(:author, name: 'Member Author', user: member) }
@@ -215,7 +215,7 @@ RSpec.describe 'Recipe Management', type: :system do
     end
 
     it 'creates author automatically if user does not have one' do
-      new_member = create(:user, email: 'newmember@test.com', password: 'password', role: :member)
+      new_member = create(:user, email: 'newmember@test.com', password: 'password', password_confirmation: 'password', role: :member)
       sign_in(new_member)
 
       expect(new_member.author).to be_nil
