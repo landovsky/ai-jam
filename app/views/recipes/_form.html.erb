@@ -72,8 +72,8 @@
 
     <!-- Submit Button -->
     <div class="flex gap-4">
-      <%= f.submit t('recipes.form.submit'), class: "flex-1 bg-stone-900 hover:bg-stone-800 text-white font-black py-5 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#a8a29e] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#a8a29e] transition-all text-xl uppercase tracking-widest" %>
-      <%= link_to t('recipes.form.cancel'), recipe.persisted? ? recipe_path(recipe) : recipes_path, class: "bg-white hover:bg-stone-50 text-stone-900 font-black py-5 px-8 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl uppercase tracking-widest" %>
+      <%= f.submit t('recipes.form.submit'), class: "flex-1 bg-stone-900 hover:bg-stone-800 text-white font-black py-5 px-12 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#a8a29e] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#a8a29e] transition-all text-xl uppercase tracking-widest" %>
+      <%= link_to t('recipes.form.cancel'), recipe.persisted? ? recipe_path(recipe) : recipes_path, class: "bg-white hover:bg-stone-50 text-stone-900 font-black py-5 px-12 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl uppercase tracking-widest" %>
     </div>
   <% end %>
 </div>

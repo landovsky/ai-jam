@@ -16,12 +16,12 @@
         <div class="flex flex-wrap gap-2 mb-4">
           <% recipe.tags.first(3).each_with_index do |tag, index| %>
             <% colors = ['bg-white', 'bg-purple-200', 'bg-green-200', 'bg-yellow-200', 'bg-orange-200'] %>
-            <span class="px-3 py-1 <%= colors[index % colors.length] %> border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
+            <span class="px-4 py-2 <%= colors[index % colors.length] %> border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
               #<%= tag %>
             </span>
           <% end %>
           <% if recipe.tags.length > 3 %>
-            <span class="px-3 py-1 bg-white border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
+            <span class="px-4 py-2 bg-white border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
               +<%= recipe.tags.length - 3 %>
             </span>
           <% end %>
@@ -55,7 +55,7 @@
       <!-- Draft Badge (only visible to authorized users) -->
       <% if !recipe.published? && signed_in? %>
         <div class="mt-3">
-          <span class="inline-block px-3 py-1 bg-amber-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
+          <span class="inline-block px-4 py-2 bg-amber-200 border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917]">
             <%= t('recipes.draft') %>
           </span>
         </div>

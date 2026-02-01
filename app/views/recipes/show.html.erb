@@ -1,8 +1,8 @@
 <div class="bg-amber-50 min-h-screen font-sans text-stone-900 selection:bg-orange-300 selection:text-stone-900">
   <!-- Language Switcher -->
   <div class="absolute top-6 right-6 z-20 flex gap-3">
-    <%= link_to "EN", recipe_path(@recipe, locale: :en), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :en ? 'bg-orange-300' : ''}" %>
-    <%= link_to "CS", recipe_path(@recipe, locale: :cs), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :cs ? 'bg-orange-300' : ''}" %>
+    <%= link_to "EN", recipe_path(@recipe, locale: :en), class: "font-black text-sm px-4 py-2 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :en ? 'bg-orange-300' : ''}" %>
+    <%= link_to "CS", recipe_path(@recipe, locale: :cs), class: "font-black text-sm px-4 py-2 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :cs ? 'bg-orange-300' : ''}" %>
   </div>
 
   <!-- Back Navigation -->
@@ -70,7 +70,7 @@
         <div class="flex flex-wrap justify-center gap-2 mb-8">
           <% @recipe.tags.each_with_index do |tag, index| %>
             <% colors = ['bg-white', 'bg-purple-200', 'bg-green-200', 'bg-yellow-200', 'bg-orange-200'] %>
-            <%= link_to recipes_path(tag: tag), class: "px-3 py-1 #{colors[index % colors.length]} border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1c1917] transition-all" do %>
+            <%= link_to recipes_path(tag: tag), class: "px-4 py-2 #{colors[index % colors.length]} border-2 border-stone-900 text-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_#1c1917] transition-all" do %>
               #<%= tag %>
             <% end %>
           <% end %>
@@ -90,8 +90,8 @@
   <section class="py-24 px-6 bg-white border-b-4 border-stone-900">
     <div class="max-w-3xl mx-auto">
       <div class="prose prose-stone max-w-none">
-        <div class="text-lg font-medium text-stone-700 leading-relaxed whitespace-pre-wrap">
-          <%= @recipe.content %>
+        <div class="text-lg font-medium text-stone-700 leading-relaxed">
+          <%= markdown(@recipe.content) %>
         </div>
       </div>
     </div>
