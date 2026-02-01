@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_24_215034) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_01_052922) do
   create_table "attendances", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.integer "jam_session_id", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_24_215034) do
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
     t.index ["jam_session_id"], name: "index_attendances_on_jam_session_id"
+    t.index ["user_id", "jam_session_id"], name: "index_attendances_on_user_and_jam_session", unique: true
     t.index ["user_id"], name: "index_attendances_on_user_id"
   end
 
@@ -25,6 +26,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_24_215034) do
     t.datetime "created_at", null: false
     t.string "name"
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_authors_on_user_id"
   end
 
   create_table "jam_sessions", force: :cascade do |t|
@@ -43,6 +46,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_24_215034) do
     t.datetime "created_at", null: false
     t.string "image"
     t.integer "jam_session_id"
+    t.boolean "published", default: false, null: false
     t.text "tags"
     t.string "title"
     t.datetime "updated_at", null: false
@@ -56,10 +60,12 @@ ActiveRecord::Schema[8.1].define(version: 2026_01_24_215034) do
     t.string "email"
     t.json "interests"
     t.string "password_digest"
+    t.integer "role", default: 0, null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email"
   end
 
   add_foreign_key "attendances", "jam_sessions"
   add_foreign_key "attendances", "users"
+  add_foreign_key "authors", "users"
 end

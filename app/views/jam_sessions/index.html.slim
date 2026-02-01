@@ -37,7 +37,7 @@
                         = session.location_address
 
                   .flex.items-center.gap-2.text-sm.font-bold.text-stone-600
-                    span= "#{session.users.count} #{t('jam_sessions.index.attendees')}"
+                    span= "#{session.attendees_count} #{t('jam_sessions.index.attendees')}"
 
                   - if signed_in? && session.user_attending?(current_user)
                     .mt-4.px-3.py-1.bg-orange-200.border-2.border-stone-900.text-xs.font-bold.rounded-lg.shadow-[2px_2px_0px_0px_#1c1917].inline-block
@@ -76,4 +76,4 @@
                     = session.title
 
                   .flex.items-center.gap-2.text-xs.font-bold.text-stone-500
-                    span= "#{session.users.count} #{t('jam_sessions.index.attendees')}"
+                    span= "#{session.attendees_count} #{t('jam_sessions.index.attendees')}"

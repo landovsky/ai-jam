@@ -1,7 +1,16 @@
 class JamSessionsController < ApplicationController
   def index
-    @upcoming_sessions = JamSession.upcoming.limit(10)
-    @past_sessions = JamSession.past.limit(10)
+    # Use left_joins with count to avoid N+1 queries for attendee counts
+    @upcoming_sessions = JamSession.upcoming
+      .left_joins(:attendances)
+      .select('jam_sessions.*, COUNT(attendances.id) AS attendees_count')
+      .group('jam_sessions.id')
+      .limit(10)
+    @past_sessions = JamSession.past
+      .left_joins(:attendances)
+      .select('jam_sessions.*, COUNT(attendances.id) AS attendees_count')
+      .group('jam_sessions.id')
+      .limit(10)
   end
 
   def show
