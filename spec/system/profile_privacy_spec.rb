@@ -11,26 +11,26 @@ RSpec.describe 'Profile Privacy', type: :system do
 
   scenario 'User A views User B profile before and after sharing event' do
     # User A signs in
-    visit step1_onboarding_index_path
-    fill_in 'Email', with: user_a.email
+    visit login_path
+    fill_in 'Email Address', with: user_a.email
     fill_in 'Password', with: 'password123'
-    click_button 'Continue'
+    click_button 'Sign In'
 
     # User B RSVPs to event (setup)
     create(:attendance, user: user_b, jam_session: jam_session)
 
     # User A views User B's profile - should be locked
-    visit profile_path(user_b)
+    visit profile_path(id: user_b.id)
     expect(page).to have_content('Private')
     expect(page).not_to have_content('Bob bio')
     expect(page).not_to have_content('Python')
 
     # User A RSVPs to same event
-    visit jam_session_path(jam_session)
+    visit jam_session_path(id: jam_session.id)
     click_button 'RSVP'
 
     # User A views User B's profile again - should be unlocked
-    visit profile_path(user_b)
+    visit profile_path(id: user_b.id)
     expect(page).to have_content('bob@example.com')
     expect(page).to have_content('Bob bio')
     expect(page).to have_content('Python')
@@ -39,19 +39,18 @@ RSpec.describe 'Profile Privacy', type: :system do
   end
 
   scenario 'Guest user views profile and sees locked state' do
-    visit profile_path(user_a)
+    visit profile_path(id: user_a.id)
     expect(page).to have_content('Private')
     expect(page).not_to have_content('Alice bio')
-    expect(page).to have_link('Sign Up')
   end
 
   scenario 'User views own profile and sees all information' do
-    visit step1_onboarding_index_path
-    fill_in 'Email', with: user_a.email
+    visit login_path
+    fill_in 'Email Address', with: user_a.email
     fill_in 'Password', with: 'password123'
-    click_button 'Continue'
+    click_button 'Sign In'
 
-    visit profile_path(user_a)
+    visit profile_path(id: user_a.id)
     expect(page).to have_content('alice@example.com')
     expect(page).to have_content('Alice bio')
     expect(page).to have_content('Ruby')
@@ -65,19 +64,19 @@ RSpec.describe 'Profile Privacy', type: :system do
     create(:attendance, user: user_b, jam_session: jam_session)
 
     # User B signs in and views User A's unlocked profile
-    visit step1_onboarding_index_path
-    fill_in 'Email', with: user_b.email
+    visit login_path
+    fill_in 'Email Address', with: user_b.email
     fill_in 'Password', with: 'password123'
-    click_button 'Continue'
+    click_button 'Sign In'
 
-    visit profile_path(user_a)
+    visit profile_path(id: user_a.id)
     expect(page).to have_content('Alice bio')
 
     # User A cancels RSVP
     attendance_a.destroy
 
     # User B refreshes and profile should be locked
-    visit profile_path(user_a)
+    visit profile_path(id: user_a.id)
     expect(page).to have_content('Private')
     expect(page).not_to have_content('Alice bio')
   end

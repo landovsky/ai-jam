@@ -10,10 +10,10 @@ RSpec.describe 'Event RSVP Flow', type: :system do
 
   scenario 'User browses events, RSVPs, and sees attendee list' do
     # Sign in
-    visit step1_onboarding_index_path
-    fill_in 'Email', with: user.email
+    visit login_path
+    fill_in 'Email Address', with: user.email
     fill_in 'Password', with: 'password123'
-    click_button 'Continue'
+    click_button 'Sign In'
 
     # Browse events
     visit jam_sessions_path
@@ -47,20 +47,20 @@ RSpec.describe 'Event RSVP Flow', type: :system do
     user2 = create(:user, email: 'bob@example.com', password: 'password123', bio: 'Bob bio', interests: ['Python', 'ML'].to_json)
 
     # User 1 RSVPs
-    visit step1_onboarding_index_path
-    fill_in 'Email', with: user.email
+    visit login_path
+    fill_in 'Email Address', with: user.email
     fill_in 'Password', with: 'password123'
-    click_button 'Continue'
-    visit jam_session_path(jam_session)
+    click_button 'Sign In'
+    visit jam_session_path(id: jam_session.id)
     click_button 'RSVP'
 
     # User 2 RSVPs
     click_button 'Logout' if page.has_button?('Logout')
-    visit step1_onboarding_index_path
-    fill_in 'Email', with: user2.email
+    visit login_path
+    fill_in 'Email Address', with: user2.email
     fill_in 'Password', with: 'password123'
-    click_button 'Continue'
-    visit jam_session_path(jam_session)
+    click_button 'Sign In'
+    visit jam_session_path(id: jam_session.id)
     click_button 'RSVP'
 
     # User 2 views event attendees

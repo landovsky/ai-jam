@@ -14,7 +14,7 @@ RSpec.describe 'Profiles', type: :request do
       end
 
       it 'displays the user profile with bio and interests' do
-        get profile_path(user_b)
+        get profile_path(id: user_b.id)
         expect(response).to have_http_status(:success)
         expect(response.body).to include('Bio B')
         expect(response.body).to include('Python')
@@ -32,14 +32,14 @@ RSpec.describe 'Profiles', type: :request do
       end
 
       it 'displays locked profile message' do
-        get profile_path(user_b)
+        get profile_path(id: user_b.id)
         expect(response).to have_http_status(:success)
         expect(response.body).to include('Profile')
         expect(response.body).to include('Private')
       end
 
       it 'does not display bio or interests' do
-        get profile_path(user_b)
+        get profile_path(id: user_b.id)
         expect(response.body).not_to include('Bio B')
         expect(response.body).not_to include('Python')
       end
@@ -49,7 +49,7 @@ RSpec.describe 'Profiles', type: :request do
       before { allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_a) }
 
       it 'displays own profile with bio and interests' do
-        get profile_path(user_a)
+        get profile_path(id: user_a.id)
         expect(response).to have_http_status(:success)
         expect(response.body).to include('Bio A')
         expect(response.body).to include('Ruby')
@@ -61,7 +61,7 @@ RSpec.describe 'Profiles', type: :request do
       before { allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(nil) }
 
       it 'displays locked profile message' do
-        get profile_path(user_a)
+        get profile_path(id: user_a.id)
         expect(response).to have_http_status(:success)
         expect(response.body).to include('Private')
       end
