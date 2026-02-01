@@ -23,5 +23,11 @@ class JamSessionsController < ApplicationController
       .where(attendances: { jam_session_id: @jam_session.id, status: 'attending' })
       .includes(:attendances, :jam_sessions)
     @current_attendance = current_user&.attendances&.find_by(jam_session: @jam_session)
+
+    # Load data for past events
+    if @jam_session.past?
+      @published_recipes = @jam_session.recipes.published.includes(:author)
+      @has_upcoming_events = JamSession.upcoming.exists?
+    end
   end
 end

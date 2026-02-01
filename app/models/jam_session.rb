@@ -13,6 +13,10 @@ class JamSession < ApplicationRecord
   scope :upcoming, -> { published_only.where('held_on >= ?', Date.today).order(held_on: :asc) }
   scope :past, -> { published_only.where('held_on < ?', Date.today).order(held_on: :desc) }
 
+  def past?
+    held_on < Date.today
+  end
+
   def user_attending?(user)
     return false if user.nil?
     attendances.attending_only.exists?(user_id: user.id)

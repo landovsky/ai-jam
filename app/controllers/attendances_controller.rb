@@ -4,6 +4,13 @@ class AttendancesController < ApplicationController
   def create
     @jam_session = JamSession.find(params[:id])
 
+    # Validate that event is not in the past
+    if @jam_session.past?
+      flash[:alert] = t('attendances.event_ended')
+      redirect_to jam_session_path(id: @jam_session.id)
+      return
+    end
+
     # Use transaction with locking to prevent race conditions
     JamSession.transaction do
       @jam_session.lock!
