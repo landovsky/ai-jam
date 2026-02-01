@@ -42,6 +42,7 @@ en:
     cancel_success: "Your RSVP has been cancelled."
     joined_waitlist: "You've been added to the waitlist (position #%{position}). You'll be notified if a spot opens up."
     promoted_from_waitlist: "Great news! You've been promoted from the waitlist. You're now attending this event!"
+    event_ended: "This event has already ended"
 
   jam_sessions:
     index:
@@ -81,6 +82,13 @@ en:
       attendees_subtitle: "Meet the jammers who are building together"
       no_attendees: "No one has RSVP'd yet. Be the first!"
       back_to_events: "← Back to Events"
+      event_ended:
+        title: "This Event Has Ended"
+        message: "Missed this one? We jam every two weeks - join us next time!"
+        browse_events: "Browse Upcoming Events"
+        back_home: "Back to Homepage"
+        you_attended: "You attended this event"
+      recipes_from_event: "Recipes from This Event"
 
   profiles:
     show:

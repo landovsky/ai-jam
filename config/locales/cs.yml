@@ -13,6 +13,7 @@ cs:
     cancel_success: "Vaše přihláška byla zrušena."
     joined_waitlist: "Byli jste přidáni na čekací listinu (pozice #%{position}). Budete informováni, pokud se uvolní místo."
     promoted_from_waitlist: "Skvělé zprávy! Byli jste povýšeni z čekací listiny. Nyní se zúčastníte této akce!"
+    event_ended: "Tato akce již skončila"
 
   jam_sessions:
     index:
@@ -56,6 +57,13 @@ cs:
       attendees_subtitle: "Seznamte se s jammers, kteří společně tvoří"
       no_attendees: "Nikdo se ještě nepřihlásil. Buďte první!"
       back_to_events: "← Zpět na Akce"
+      event_ended:
+        title: "Tato akce již skončila"
+        message: "Zmeškal jste tento jam? Scházíme se každé dva týdny - přidejte se příště!"
+        browse_events: "Procházet nadcházející akce"
+        back_home: "Zpět na hlavní stránku"
+        you_attended: "Zúčastnil jste se této akce"
+      recipes_from_event: "Recepty z této akce"
 
   profiles:
     show:

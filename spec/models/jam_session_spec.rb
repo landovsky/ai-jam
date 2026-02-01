@@ -68,6 +68,23 @@ RSpec.describe JamSession, type: :model do
     end
   end
 
+  describe '#past?' do
+    it 'returns true when held_on is before today' do
+      jam_session = create(:jam_session, held_on: 1.week.ago.to_date)
+      expect(jam_session.past?).to be true
+    end
+
+    it 'returns false when held_on is today' do
+      jam_session = create(:jam_session, held_on: Date.today)
+      expect(jam_session.past?).to be false
+    end
+
+    it 'returns false when held_on is in the future' do
+      jam_session = create(:jam_session, held_on: 1.week.from_now.to_date)
+      expect(jam_session.past?).to be false
+    end
+  end
+
   describe '#user_attending?' do
     let(:jam_session) { create(:jam_session) }
     let(:user) { create(:user) }
