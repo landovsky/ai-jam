@@ -1,0 +1,64 @@
+en:
+  recipes:
+    anonymous: "Anonymous"
+    read_recipe: "Read Recipe →"
+    draft: "Draft"
+    created: "Recipe created successfully!"
+    updated: "Recipe updated successfully!"
+
+    errors:
+      not_published: "This recipe is not published yet."
+      unauthorized: "You are not authorized to edit this recipe."
+
+    index:
+      title: "The Living Recipe Book"
+      subtitle: "Browse our collection of AI experiments, workflows, and learnings from the community."
+      create_recipe: "Share Your Recipe"
+      no_results: "No recipes found"
+      no_results_hint: "Try adjusting your search or filters"
+      clear_filters: "Clear Filters"
+
+    search:
+      query_label: "Search Recipes"
+      query_placeholder: "Search by title or content..."
+      filter_by_tag: "Filter by Tag"
+      active_filters: "Active Filters"
+      search: "Search"
+      clear_all: "Clear all"
+      submit: "Search"
+
+    show:
+      back_to_recipes: "Back to Recipes"
+      by: "By:"
+      session: "Session:"
+      edit_recipe: "Edit Recipe"
+
+    new:
+      title: "Share Your Recipe"
+      subtitle: "Document your AI experiment or workflow for the community"
+
+    edit:
+      title: "Edit Recipe"
+      back_to_recipe: "Back to Recipe"
+
+    form:
+      errors_header:
+        one: "%{count} error prevented this recipe from being saved:"
+        other: "%{count} errors prevented this recipe from being saved:"
+      title_label: "Recipe Title"
+      title_placeholder: "e.g., Automating Weekly Reports with ChatGPT"
+      content_label: "Recipe Content"
+      content_placeholder: "Describe the problem, your workflow, the tools you used, and the verdict. What worked? What didn't?"
+      content_hint: "Share the details that would help someone else reproduce your work"
+      image_label: "Recipe Icon (Emoji)"
+      image_placeholder: "🗄️"
+      image_hint: "Pick an emoji that represents your recipe"
+      tags_label: "Tags"
+      tags_placeholder: "Database, Claude, Automation"
+      tags_hint: "Separate tags with commas"
+      jam_session_label: "Jam Session (Optional)"
+      jam_session_blank: "None"
+      published_label: "Publish this recipe"
+      published_hint: "Published recipes are visible to everyone. Drafts are only visible to you."
+      submit: "Save Recipe"
+      cancel: "Cancel"

@@ -5,7 +5,7 @@
         h1.text-3xl.md:text-4xl.font-black.mb-4.text-stone-900 Welcome Back
         p.text-stone-600.font-bold Sign in to your account.
 
-      = form_with url: login_path, local: true, class: "space-y-6" do |f|
+      = form_with url: login_path, local: true, class: "space-y-6", data: { turbo: false } do |f|
         - if flash[:alert]
           .bg-red-50.border-2.border-red-900.text-red-900.p-4.rounded-xl.mb-6
              = flash[:alert]

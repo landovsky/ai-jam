@@ -1,0 +1,51 @@
+<div class="bg-amber-50 min-h-screen font-sans text-stone-900 selection:bg-orange-300 selection:text-stone-900">
+  <!-- Language Switcher -->
+  <div class="absolute top-6 right-6 z-20 flex gap-3">
+    <%= link_to "EN", new_recipe_path(locale: :en), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :en ? 'bg-orange-300' : ''}" %>
+    <%= link_to "CS", new_recipe_path(locale: :cs), class: "font-black text-sm px-3 py-1 bg-white border-2 border-stone-900 shadow-[3px_3px_0px_0px_#1c1917] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#1c1917] transition-all #{I18n.locale == :cs ? 'bg-orange-300' : ''}" %>
+  </div>
+
+  <!-- Back Navigation -->
+  <div class="py-6 px-6 bg-white border-b-2 border-stone-900">
+    <div class="max-w-3xl mx-auto">
+      <%= link_to recipes_path, class: "inline-flex items-center text-stone-900 font-bold hover:text-orange-600 transition-colors" do %>
+        <span aria-hidden="true" class="mr-2">&larr;</span>
+        <%= t('recipes.show.back_to_recipes') %>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Form Section -->
+  <section class="py-24 px-6 bg-amber-400 relative overflow-hidden border-b-4 border-stone-900">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-orange-300 rounded-full border-4 border-stone-900 -mr-32 -mt-32 opacity-50"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full border-4 border-stone-900 -ml-24 -mb-24 opacity-50"></div>
+
+    <div class="max-w-3xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-black mb-4 text-stone-900">
+          <%= t('recipes.new.title') %>
+        </h1>
+        <p class="text-xl font-bold text-stone-800">
+          <%= t('recipes.new.subtitle') %>
+        </p>
+      </div>
+
+      <%= render 'form', recipe: @recipe %>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-sm font-bold">
+        &copy; <%= Time.current.year %> <%= t('homepage.footer.copyright') %>
+      </div>
+      <div class="flex gap-6 font-bold">
+        <%= link_to t('homepage.footer.about'), root_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('homepage.footer.recipes'), recipes_path, class: "hover:text-white transition-colors" %>
+        <%= link_to t('homepage.footer.contact'), root_path, class: "hover:text-white transition-colors" %>
+      </div>
+    </div>
+  </footer>
+</div>
