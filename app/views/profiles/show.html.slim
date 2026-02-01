@@ -1,0 +1,76 @@
+.bg-amber-50.min-h-screen.font-sans.text-stone-900
+  / Profile Header Section
+  section.py-24.px-6.bg-white.border-b-4.border-stone-900
+    .max-w-4xl.mx-auto
+      .text-center.mb-12
+        .w-32.h-32.mx-auto.bg-orange-300.rounded-full.flex.items-center.justify-center.mb-8.border-4.border-stone-900.shadow-[6px_6px_0px_0px_#1c1917]
+          .text-5xl.font-black.text-white
+            = @user.email[0].upcase
+
+        h1.text-5xl.md:text-7xl.font-black.mb-6.text-stone-900
+          = @user.email
+
+        - if @user == current_user
+          div class="inline-block px-4 py-2 mb-4 text-sm font-black tracking-widest uppercase bg-purple-200 border-2 border-stone-900 shadow-[4px_4px_0px_0px_#1c1917] rounded-full"
+            = t('profiles.show.your_profile')
+
+  / Profile Content Section
+  - if @profile_visible
+    / Bio Section
+    - if @user.bio.present?
+      section.py-24.px-6.bg-amber-50.border-b-4.border-stone-900
+        .max-w-3xl.mx-auto
+          .text-center.mb-12
+            h2.text-3xl.font-black.text-stone-900.mb-3
+              = t('profiles.show.bio_title')
+            p.text-sm.font-bold.text-stone-600.uppercase.tracking-wider
+              = t('profiles.show.unlocked_label')
+
+          .p-8.rounded-3xl.bg-white.border-4.border-stone-900.shadow-[12px_12px_0px_0px_#1c1917]
+            .text-lg.font-medium.text-stone-700.leading-relaxed
+              = simple_format(@user.bio)
+
+    / Interests Section
+    - if @user.interests.present?
+      section.py-24.px-6.bg-white.border-b-4.border-stone-900
+        .max-w-3xl.mx-auto
+          .text-center.mb-12
+            h2.text-3xl.font-black.text-stone-900.mb-3
+              = t('profiles.show.interests_title')
+            p.text-sm.font-bold.text-stone-600.uppercase.tracking-wider
+              = t('profiles.show.unlocked_label')
+
+          .flex.flex-wrap.gap-3.justify-center
+            - JSON.parse(@user.interests).each do |interest|
+              span.px-4.py-2.bg-purple-200.border-2.border-stone-900.text-stone-900.text-sm.font-bold.rounded-lg.shadow-[2px_2px_0px_0px_#1c1917]
+                = interest
+
+    / Shared Events Section
+    - if @shared_events.any?
+      section.py-24.px-6.bg-amber-50
+        .max-w-4xl.mx-auto
+          .text-center.mb-12
+            h2.text-3xl.font-black.text-stone-900
+              = t('profiles.show.shared_events_title')
+
+          .space-y-4
+            - @shared_events.each do |event|
+              .p-6.rounded-2xl.bg-white.border-2.border-stone-900.shadow-[6px_6px_0px_0px_#1c1917]
+                .flex.justify-between.items-center
+                  div
+                    h3.text-xl.font-black.text-stone-900
+                      = event.title
+                    p.text-sm.font-bold.text-stone-600
+                      = l(event.held_on, format: :long)
+                  = link_to jam_session_path(event), class: 'px-4.py-2.bg-orange-500.text-white.font-bold.rounded-lg.border-2.border-stone-900.shadow-[2px_2px_0px_0px_#1c1917].hover:translate-x-[1px].hover:translate-y-[1px].hover:shadow-[1px_1px_0px_0px_#1c1917].transition-all.text-sm' do
+                    = t('profiles.show.view_event')
+
+  - else
+    / Locked Profile Section
+    = render 'shared/locked_profile_message'
+
+  / Back Link
+  section.py-12.px-6.bg-amber-50
+    .max-w-4xl.mx-auto.text-center
+      = link_to :back, class: 'inline-block bg-white text-stone-900 font-black py-4 px-10 rounded-xl border-2 border-stone-900 shadow-[6px_6px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#1c1917] transition-all text-xl' do
+        = t('profiles.show.back')

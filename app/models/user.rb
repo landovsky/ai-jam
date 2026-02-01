@@ -1,10 +1,14 @@
 class User < ApplicationRecord
   has_secure_password
   has_one :author, dependent: :nullify
+  has_many :attendances, dependent: :destroy
+  has_many :jam_sessions, through: :attendances
 
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   enum :role, { member: 0, topic_manager: 1, admin: 2 }, default: :member
+
+  include ProfileVisibility
 
   def can_edit_recipe?(recipe)
     return false if recipe.nil?

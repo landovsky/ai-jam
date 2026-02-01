@@ -1,0 +1,62 @@
+cs:
+  hello: "Ahoj světe"
+
+  navigation:
+    home: "Domů"
+    events: "Akce"
+    my_profile: "Můj Profil"
+    logout: "Odhlásit se"
+
+  attendances:
+    rsvp_success: "Úspěšně jste se přihlásili k této akci! Váš profil je nyní odemčen pro ostatní účastníky."
+    rsvp_error: "Nelze se přihlásit: %{error}"
+    cancel_success: "Vaše přihláška byla zrušena."
+
+  jam_sessions:
+    index:
+      title: "AI Jam Akce"
+      subtitle: "Připojte se k praktickému zkoumání a experimentování s AI"
+      upcoming_title: "Nadcházející Akce"
+      upcoming_subtitle: "Přihlaste se a odemkněte profily dalších účastníků"
+      past_title: "Minulé Akce"
+      past_subtitle: "Zmeškal jste jam? Podívejte se, co jsme prozkoumali společně"
+      attendees: "účastníků"
+      you_are_attending: "Účastníte se!"
+      no_upcoming: "Žádné Nadcházející Akce"
+      check_back_soon: "Brzy se podívejte zpět na naši další jam session"
+    show:
+      rsvp_button: "Přihlásit se k Akci"
+      cancel_rsvp: "Zrušit Přihlášku"
+      sign_up_to_rsvp: "Zaregistrujte se"
+      attendees_title:
+        one: "1 Účastník"
+        few: "%{count} Účastníci"
+        other: "%{count} Účastníků"
+      attendees_subtitle: "Seznamte se s jammers, kteří společně tvoří"
+      no_attendees: "Nikdo se ještě nepřihlásil. Buďte první!"
+      back_to_events: "← Zpět na Akce"
+
+  profiles:
+    show:
+      your_profile: "Váš Profil"
+      bio_title: "O mně"
+      interests_title: "Zájmy"
+      unlocked_label: "Odemčeno"
+      shared_events_title: "Akce, kterých jsme se zúčastnili společně"
+      view_event: "Zobrazit Akci"
+      back: "← Zpět"
+
+  shared:
+    user_card:
+      view_profile: "Zobrazit Profil"
+      profile_locked: "Profil Zamčen"
+      unlock_hint: "Přihlaste se ke stejné akci pro odemčení tohoto profilu"
+      sign_up: "Zaregistrujte se"
+    locked_profile:
+      title: "Tento Profil je Soukromý"
+      explanation_html: "Věříme v soukromí založené na kontextu. Bio a zájmy tohoto uživatele jsou sdíleny pouze s lidmi, se kterými se skutečně setká na akcích."
+      how_to_unlock: "Jak Odemknout Tento Profil"
+      step_1: "Prohlédněte si naše nadcházející akce"
+      step_2: "Přihlaste se k akci, které se také účastní tato osoba"
+      step_3: "Setkejte se osobně a odemkněte si navzájem profily!"
+      browse_events: "Procházet Akce"
