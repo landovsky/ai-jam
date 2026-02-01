@@ -33,5 +33,14 @@ Rails.application.routes.draw do
     get 'login', to: 'sessions#new'
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy'
+
+    resources :jam_sessions, only: [:index, :show] do
+      member do
+        post :rsvp, to: 'attendances#create'
+      end
+    end
+
+    resources :attendances, only: [:destroy]
+    resources :profiles, only: [:show]
   end
 end

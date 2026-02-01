@@ -1,0 +1,79 @@
+.bg-amber-50.min-h-screen.font-sans.text-stone-900
+  / Hero Section
+  section.py-24.px-6.bg-white.border-b-4.border-stone-900
+    .max-w-4xl.mx-auto.text-center
+      h1.text-5xl.md:text-7xl.font-black.mb-6.text-stone-900
+        = t('jam_sessions.index.title')
+      p.text-xl.font-bold.text-stone-600
+        = t('jam_sessions.index.subtitle')
+
+  / Upcoming Events Section
+  - if @upcoming_sessions.any?
+    section.py-24.px-6.bg-amber-50.border-b-4.border-stone-900
+      .max-w-6xl.mx-auto
+        .text-center.mb-20
+          h2.text-4xl.md:text-5xl.font-black.mb-6.text-stone-900
+            = t('jam_sessions.index.upcoming_title')
+          p.text-xl.font-bold.text-stone-600
+            = t('jam_sessions.index.upcoming_subtitle')
+
+        .grid.md:grid-cols-2.lg:grid-cols-3.gap-8
+          - @upcoming_sessions.each do |session|
+            = link_to jam_session_path(session), class: 'block' do
+              article.bg-white.rounded-3xl.border-2.border-stone-900.shadow-[8px_8px_0px_0px_#1c1917].hover:translate-x-[2px].hover:translate-y-[2px].hover:shadow-[6px_6px_0px_0px_#1c1917].transition-all.overflow-hidden.group
+                .h-48.bg-amber-100.flex.items-center.justify-center.p-6.border-b-2.border-stone-900
+                  .text-6xl.font-black.text-stone-900
+                    = session.held_on.strftime('%d')
+                    .text-2xl.font-bold.text-stone-600.mt-2
+                      = l(session.held_on, format: '%b %Y')
+
+                .p-8
+                  h3.text-2xl.font-black.mb-4.text-stone-900.group-hover:text-orange-600.transition-colors
+                    = session.title
+
+                  - if session.location_address.present?
+                    .flex.items-start.gap-2.mb-4
+                      .text-stone-600.font-bold
+                        = session.location_address
+
+                  .flex.items-center.gap-2.text-sm.font-bold.text-stone-600
+                    span= "#{session.users.count} #{t('jam_sessions.index.attendees')}"
+
+                  - if signed_in? && session.user_attending?(current_user)
+                    .mt-4.px-3.py-1.bg-orange-200.border-2.border-stone-900.text-xs.font-bold.rounded-lg.shadow-[2px_2px_0px_0px_#1c1917].inline-block
+                      = t('jam_sessions.index.you_are_attending')
+
+  - else
+    section.py-24.px-6.bg-amber-50.border-b-4.border-stone-900
+      .max-w-4xl.mx-auto.text-center
+        h2.text-4xl.md:text-5xl.font-black.mb-6.text-stone-900
+          = t('jam_sessions.index.no_upcoming')
+        p.text-xl.font-bold.text-stone-600
+          = t('jam_sessions.index.check_back_soon')
+
+  / Past Events Section
+  - if @past_sessions.any?
+    section.py-24.px-6.bg-white
+      .max-w-6xl.mx-auto
+        .text-center.mb-20
+          h2.text-4xl.md:text-5xl.font-black.mb-6.text-stone-900
+            = t('jam_sessions.index.past_title')
+          p.text-xl.font-bold.text-stone-600
+            = t('jam_sessions.index.past_subtitle')
+
+        .grid.md:grid-cols-2.lg:grid-cols-3.gap-8
+          - @past_sessions.each do |session|
+            = link_to jam_session_path(session), class: 'block' do
+              article.bg-white.rounded-3xl.border-2.border-stone-900.shadow-[8px_8px_0px_0px_#1c1917].hover:translate-x-[2px].hover:translate-y-[2px].hover:shadow-[6px_6px_0px_0px_#1c1917].transition-all.overflow-hidden.group
+                .h-32.bg-stone-100.flex.items-center.justify-center.p-6.border-b-2.border-stone-900
+                  .text-4xl.font-black.text-stone-600
+                    = session.held_on.strftime('%d')
+                    .text-lg.font-bold.text-stone-500.mt-1
+                      = l(session.held_on, format: '%b %Y')
+
+                .p-6
+                  h3.text-xl.font-black.mb-2.text-stone-900.group-hover:text-orange-600.transition-colors
+                    = session.title
+
+                  .flex.items-center.gap-2.text-xs.font-bold.text-stone-500
+                    span= "#{session.users.count} #{t('jam_sessions.index.attendees')}"

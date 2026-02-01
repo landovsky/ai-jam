@@ -24,6 +24,20 @@
   </head>
 
   <body>
+    <% if signed_in? %>
+      <nav class="px-6 py-4 bg-stone-900 border-b-4 border-stone-900 flex justify-between items-center">
+        <div class="flex gap-6">
+          <%= link_to t('navigation.home'), root_path, class: 'text-white font-bold hover:text-orange-300 transition-colors' %>
+          <%= link_to t('navigation.events'), jam_sessions_path, class: 'text-white font-bold hover:text-orange-300 transition-colors' %>
+          <%= link_to t('navigation.my_profile'), profile_path(current_user), class: 'text-white font-bold hover:text-orange-300 transition-colors' %>
+        </div>
+        <div class="flex gap-6 items-center">
+          <span class="text-white text-sm font-medium"><%= current_user.email %></span>
+          <%= button_to t('navigation.logout'), logout_path, method: :delete, class: 'bg-orange-500 text-white font-bold py-2 px-4 rounded-lg border-2 border-orange-700 hover:bg-orange-600 transition-colors text-sm' %>
+        </div>
+      </nav>
+    <% end %>
+
     <% flash.each do |type, message| %>
       <div class="px-6 py-4 font-bold text-center border-b-4 border-stone-900 <%= type == 'notice' ? 'bg-orange-500 text-white' : 'bg-red-500 text-white' %>">
         <%= message %>

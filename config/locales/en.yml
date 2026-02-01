@@ -29,3 +29,62 @@
 
 en:
   hello: "Hello world"
+
+  navigation:
+    home: "Home"
+    events: "Events"
+    my_profile: "My Profile"
+    logout: "Logout"
+
+  attendances:
+    rsvp_success: "You've successfully RSVP'd to this event! Your profile is now unlocked for other attendees."
+    rsvp_error: "Could not RSVP: %{error}"
+    cancel_success: "Your RSVP has been cancelled."
+
+  jam_sessions:
+    index:
+      title: "AI Jam Events"
+      subtitle: "Join us for hands-on exploration and practical AI experimentation"
+      upcoming_title: "Upcoming Events"
+      upcoming_subtitle: "RSVP to unlock profiles and connect with fellow jammers"
+      past_title: "Past Events"
+      past_subtitle: "Missed a jam? Browse what we've explored together"
+      attendees: "attendees"
+      you_are_attending: "You're attending!"
+      no_upcoming: "No Upcoming Events"
+      check_back_soon: "Check back soon for our next jam session"
+    show:
+      rsvp_button: "RSVP to this Event"
+      cancel_rsvp: "Cancel RSVP"
+      sign_up_to_rsvp: "Sign Up to RSVP"
+      attendees_title:
+        one: "1 Attendee"
+        other: "%{count} Attendees"
+      attendees_subtitle: "Meet the jammers who are building together"
+      no_attendees: "No one has RSVP'd yet. Be the first!"
+      back_to_events: "← Back to Events"
+
+  profiles:
+    show:
+      your_profile: "Your Profile"
+      bio_title: "About"
+      interests_title: "Interests"
+      unlocked_label: "Unlocked"
+      shared_events_title: "Events We've Attended Together"
+      view_event: "View Event"
+      back: "← Back"
+
+  shared:
+    user_card:
+      view_profile: "View Profile"
+      profile_locked: "Profile Locked"
+      unlock_hint: "RSVP to the same event to unlock this profile"
+      sign_up: "Sign Up to Connect"
+    locked_profile:
+      title: "This Profile is Private"
+      explanation_html: "We believe in context-driven privacy. This user's bio and interests are shared only with people they'll actually meet at events."
+      how_to_unlock: "How to Unlock This Profile"
+      step_1: "Browse our upcoming events"
+      step_2: "RSVP to an event this person is also attending"
+      step_3: "Meet in person and unlock each other's profiles!"
+      browse_events: "Browse Events"
