@@ -12,7 +12,7 @@ article.bg-white.rounded-3xl.border-2.border-stone-900.shadow-[8px_8px_0px_0px_#
   / User Info
   .p-6
     h3.text-xl.font-black.mb-3.text-stone-900
-      = link_to user.email, profile_path(user), class: 'hover:text-orange-600 transition-colors'
+      = link_to user.email, profile_path(id: user.id), class: 'hover:text-orange-600 transition-colors'
 
     - if profile_visible
       / Show bio if visible
@@ -31,8 +31,7 @@ article.bg-white.rounded-3xl.border-2.border-stone-900.shadow-[8px_8px_0px_0px_#
               = "+#{JSON.parse(user.interests).count - 3}"
 
       / View Profile Link
-      = link_to profile_path(user), class: 'inline-block px-4.py-2.bg-orange-500.text-white.font-bold.rounded-lg.border-2.border-stone-900.shadow-[2px_2px_0px_0px_#1c1917].hover:translate-x-[1px].hover:translate-y-[1px].hover:shadow-[1px_1px_0px_0px_#1c1917].transition-all.text-sm' do
-        = t('shared.user_card.view_profile')
+      = link_to t('shared.user_card.view_profile'), profile_path(id: user.id), class: 'inline-block px-4.py-2.bg-orange-500.text-white.font-bold.rounded-lg.border-2.border-stone-900.shadow-[2px_2px_0px_0px_#1c1917].hover:translate-x-[1px].hover:translate-y-[1px].hover:shadow-[1px_1px_0px_0px_#1c1917].transition-all.text-sm'
 
     - else
       / Show locked state
