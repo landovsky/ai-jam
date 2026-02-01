@@ -54,7 +54,7 @@
       <%= f.label :jam_session_id, class: "block text-sm font-black text-stone-900 uppercase tracking-wider mb-2" do %>
         <%= t('recipes.form.jam_session_label') %>
       <% end %>
-      <%= f.collection_select :jam_session_id, JamSession.order(created_at: :desc), :id, :name, { include_blank: t('recipes.form.jam_session_blank') }, class: "w-full bg-stone-50 border-2 border-stone-900 rounded-xl px-4 py-4 text-stone-900 font-bold focus:ring-0 focus:shadow-[4px_4px_0px_0px_#1c1917] focus:translate-x-[-2px] focus:translate-y-[-2px] outline-none transition-all" %>
+      <%= f.collection_select :jam_session_id, JamSession.order(created_at: :desc), :id, :title, { include_blank: t('recipes.form.jam_session_blank') }, class: "w-full bg-stone-50 border-2 border-stone-900 rounded-xl px-4 py-4 text-stone-900 font-bold focus:ring-0 focus:shadow-[4px_4px_0px_0px_#1c1917] focus:translate-x-[-2px] focus:translate-y-[-2px] outline-none transition-all" %>
     </div>
 
     <!-- Published (only for topic managers and admins) -->

@@ -60,7 +60,7 @@
         <% if @recipe.jam_session.present? %>
           <div class="px-4 py-2 bg-white border-2 border-stone-900 rounded-xl shadow-[4px_4px_0px_0px_#1c1917] font-bold text-sm">
             <span class="text-stone-600"><%= t('recipes.show.session') %></span>
-            <%= @recipe.jam_session.name %>
+            <%= @recipe.jam_session.title %>
           </div>
         <% end %>
       </div>
