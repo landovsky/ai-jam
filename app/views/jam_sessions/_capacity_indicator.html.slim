@@ -1,0 +1,8 @@
+/ Capacity indicator partial
+- if jam_session.capacity.present?
+  - if jam_session.at_capacity?
+    .px-3.py-1.bg-amber-400.border-2.border-stone-900.text-xs.font-bold.rounded-lg.shadow-[2px_2px_0px_0px_#1c1917].inline-block
+      = t('jam_sessions.capacity.full_waitlist')
+  - elsif jam_session.spots_remaining && jam_session.spots_remaining <= 5
+    .px-3.py-1.bg-orange-200.border-2.border-stone-900.text-xs.font-bold.rounded-lg.shadow-[2px_2px_0px_0px_#1c1917].inline-block
+      = t('jam_sessions.capacity.spots_remaining', count: jam_session.spots_remaining)
