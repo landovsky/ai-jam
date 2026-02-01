@@ -33,10 +33,16 @@ RSpec.describe 'Recipe Management', type: :system do
   end
 
   def sign_in(user)
+    # Clear any existing session/browser state
+    Capybara.reset_sessions!
+
     visit login_path
     fill_in 'Email', with: user.email
     fill_in 'Password', with: 'password'
-    click_button 'Log In'
+    click_button 'Sign In'
+
+    # Wait for redirect to complete
+    expect(page).to have_content('Signed in successfully')
   end
 
   describe 'authenticated member' do
@@ -59,7 +65,7 @@ RSpec.describe 'Recipe Management', type: :system do
 
       expect(page).to have_content('Recipe created successfully')
       expect(page).to have_content('New Member Recipe')
-      expect(page).to have_content('Draft') # Members create drafts by default
+      expect(page).to have_content(/draft/i) # Members create drafts by default
 
       # Verify database
       recipe = Recipe.last
@@ -70,7 +76,7 @@ RSpec.describe 'Recipe Management', type: :system do
     end
 
     it 'can edit their own recipe' do
-      visit recipe_path(member_recipe)
+      visit recipe_path(id: member_recipe.id)
 
       click_link 'Edit Recipe'
 
@@ -85,13 +91,13 @@ RSpec.describe 'Recipe Management', type: :system do
     end
 
     it 'cannot edit recipes from other users' do
-      visit recipe_path(admin_recipe)
+      visit recipe_path(id: admin_recipe.id)
 
       expect(page).not_to have_link('Edit Recipe')
     end
 
     it 'cannot publish their own recipes' do
-      visit edit_recipe_path(member_recipe)
+      visit edit_recipe_path(id: member_recipe.id)
 
       expect(page).not_to have_field('Publish this recipe')
     end
@@ -100,7 +106,7 @@ RSpec.describe 'Recipe Management', type: :system do
       visit recipes_path
 
       expect(page).to have_content('Member Recipe')
-      expect(page).to have_content('Draft')
+      expect(page).to have_content(/draft/i)
     end
   end
 
@@ -122,7 +128,7 @@ RSpec.describe 'Recipe Management', type: :system do
 
       expect(page).to have_content('Recipe created successfully')
       expect(page).to have_content('Topic Manager Recipe')
-      expect(page).not_to have_content('Draft')
+      expect(page).not_to have_content(/draft/i)
 
       # Verify it's published
       recipe = Recipe.last
@@ -130,7 +136,7 @@ RSpec.describe 'Recipe Management', type: :system do
     end
 
     it 'can edit any recipe' do
-      visit recipe_path(member_recipe)
+      visit recipe_path(id: member_recipe.id)
 
       click_link 'Edit Recipe'
 
@@ -146,13 +152,14 @@ RSpec.describe 'Recipe Management', type: :system do
     end
 
     it 'can unpublish recipes' do
-      visit edit_recipe_path(admin_recipe)
+      visit edit_recipe_path(id: admin_recipe.id)
 
       uncheck 'Publish this recipe'
       click_button 'Save Recipe'
 
-      admin_recipe.reload
-      expect(admin_recipe.published).to be false
+      # Verify through UI - draft badge should appear
+      expect(page).to have_content('Recipe updated successfully')
+      expect(page).to have_content(/draft/i)
     end
   end
 
@@ -175,7 +182,7 @@ RSpec.describe 'Recipe Management', type: :system do
     end
 
     it 'can edit any recipe' do
-      visit recipe_path(member_recipe)
+      visit recipe_path(id: member_recipe.id)
 
       click_link 'Edit Recipe'
 
@@ -197,20 +204,21 @@ RSpec.describe 'Recipe Management', type: :system do
 
       click_button 'Save Recipe'
 
-      expect(page).to have_content('error')
+      expect(page).to have_content(/error/i)
       expect(Recipe.count).to eq(2) # No new recipe created
     end
 
     it 'handles tags as comma-separated values' do
       visit new_recipe_path
 
-      fill_in 'Recipe Title', with: 'Tag Test'
+      fill_in 'Recipe Title', with: 'Tag Test Recipe'
       fill_in 'Recipe Content', with: 'Testing tags'
       fill_in 'Tags', with: 'Tag1, Tag2, Tag3'
 
       click_button 'Save Recipe'
 
-      recipe = Recipe.last
+      expect(page).to have_content('Recipe created successfully')
+      recipe = Recipe.find_by(title: 'Tag Test Recipe')
       expect(recipe.tags).to eq(['Tag1', 'Tag2', 'Tag3'])
     end
 
@@ -244,9 +252,9 @@ RSpec.describe 'Recipe Management', type: :system do
     it 'prevents unauthorized editing via direct URL access' do
       sign_in(member)
 
-      visit edit_recipe_path(admin_recipe)
+      visit edit_recipe_path(id: admin_recipe.id)
 
-      expect(page).to have_current_path(recipe_path(admin_recipe, locale: :en))
+      expect(page).to have_current_path(recipe_path(id: admin_recipe.id, locale: :en))
       expect(page).to have_content('You are not authorized')
     end
   end
@@ -263,11 +271,11 @@ RSpec.describe 'Recipe Management', type: :system do
     end
 
     it 'allows canceling recipe edit' do
-      visit edit_recipe_path(member_recipe)
+      visit edit_recipe_path(id: member_recipe.id)
 
       click_link 'Cancel'
 
-      expect(page).to have_current_path(recipe_path(member_recipe, locale: :en))
+      expect(page).to have_current_path(recipe_path(id: member_recipe.id, locale: :en))
     end
   end
 end

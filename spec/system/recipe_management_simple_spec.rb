@@ -11,10 +11,12 @@ RSpec.describe 'Recipe Management (Simplified)', type: :system do
   let!(:admin_author) { create(:author, name: 'Admin Author', user: admin) }
 
   def sign_in(user)
+    Capybara.reset_sessions!
     visit login_path
-    fill_in 'Email Address', with: user.email
+    fill_in 'Email', with: user.email
     fill_in 'Password', with: 'password123'
     click_button 'Sign In'
+    expect(page).to have_content('Signed in successfully')
   end
 
   describe 'creating recipes' do

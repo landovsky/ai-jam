@@ -9,14 +9,16 @@ class RecipesController < ApplicationController
     # Anonymous users see only published recipes
     @recipes = @recipes.published unless signed_in?
 
-    # Search
+    # Search - use sanitized LIKE query to prevent SQL injection
     if params[:q].present?
-      @recipes = @recipes.where("title LIKE ? OR content LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%")
+      search_term = "%#{Recipe.sanitize_sql_like(params[:q])}%"
+      @recipes = @recipes.where("title LIKE ? OR content LIKE ?", search_term, search_term)
     end
 
-    # Tag filtering - use SQL LIKE for better performance
+    # Tag filtering - use sanitized LIKE query for YAML-serialized tags
     if params[:tag].present?
-      @recipes = @recipes.where("tags LIKE ?", "%- #{params[:tag]}%")
+      sanitized_tag = Recipe.sanitize_sql_like(params[:tag])
+      @recipes = @recipes.where("tags LIKE ?", "%- #{sanitized_tag}%")
     end
 
     @recipes = @recipes.order(created_at: :desc)
