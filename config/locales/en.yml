@@ -40,6 +40,8 @@ en:
     rsvp_success: "You've successfully RSVP'd to this event! Your profile is now unlocked for other attendees."
     rsvp_error: "Could not RSVP: %{error}"
     cancel_success: "Your RSVP has been cancelled."
+    joined_waitlist: "You've been added to the waitlist (position #%{position}). You'll be notified if a spot opens up."
+    promoted_from_waitlist: "Great news! You've been promoted from the waitlist. You're now attending this event!"
 
   jam_sessions:
     index:
@@ -53,10 +55,26 @@ en:
       you_are_attending: "You're attending!"
       no_upcoming: "No Upcoming Events"
       check_back_soon: "Check back soon for our next jam session"
+    capacity:
+      spots_remaining:
+        one: "1 spot left"
+        other: "%{count} spots left"
+      full_waitlist: "Full - Waitlist available"
     show:
       rsvp_button: "RSVP to this Event"
       cancel_rsvp: "Cancel RSVP"
       sign_up_to_rsvp: "Sign Up to RSVP"
+      join_waitlist: "Join Waitlist"
+      leave_waitlist: "Leave Waitlist"
+      on_waitlist: "You're on the waitlist"
+      waitlist_position: "Position: #%{position}"
+      spots_remaining:
+        one: "1 spot remaining"
+        other: "%{count} spots remaining"
+      event_full: "Event is at capacity"
+      waitlist_count:
+        one: "1 person on waitlist"
+        other: "%{count} people on waitlist"
       attendees_title:
         one: "1 Attendee"
         other: "%{count} Attendees"
@@ -88,3 +106,13 @@ en:
       step_2: "RSVP to an event this person is also attending"
       step_3: "Meet in person and unlock each other's profiles!"
       browse_events: "Browse Events"
+
+  waitlist_mailer:
+    promotion_notification:
+      subject: "You're off the waitlist for %{event}!"
+      greeting: "Hi %{name},"
+      body_html: "Great news! A spot has opened up for <strong>%{event}</strong> and you've been promoted from the waitlist. You're now confirmed to attend!"
+      body_text: "Great news! A spot has opened up for %{event} and you've been promoted from the waitlist. You're now confirmed to attend!"
+      profile_visibility: "Your profile is now visible to other attendees of this event."
+      view_event: "View Event Details"
+      closing: "See you at the jam!"

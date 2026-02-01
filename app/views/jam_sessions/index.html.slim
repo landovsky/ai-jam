@@ -20,7 +20,7 @@
         .grid.md:grid-cols-2.lg:grid-cols-3.gap-8
           - @upcoming_sessions.each do |session|
             = link_to jam_session_path(id: session.id), class: 'block' do
-              article.bg-white.rounded-3xl.border-2.border-stone-900.shadow-[8px_8px_0px_0px_#1c1917].hover:translate-x-[2px].hover:translate-y-[2px].hover:shadow-[6px_6px_0px_0px_#1c1917].transition-all.overflow-hidden.group
+              article class="bg-white rounded-3xl border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all overflow-hidden group"
                 .h-48.bg-amber-100.flex.items-center.justify-center.p-6.border-b-2.border-stone-900
                   .text-6xl.font-black.text-stone-900
                     = session.held_on.strftime('%d')
@@ -39,9 +39,12 @@
                   .flex.items-center.gap-2.text-sm.font-bold.text-stone-600
                     span= "#{session.attendees_count} #{t('jam_sessions.index.attendees')}"
 
-                  - if signed_in? && session.user_attending?(current_user)
-                    .mt-4.px-3.py-1.bg-orange-200.border-2.border-stone-900.text-xs.font-bold.rounded-lg.shadow-[2px_2px_0px_0px_#1c1917].inline-block
-                      = t('jam_sessions.index.you_are_attending')
+                  .mt-4.flex.flex-wrap.gap-2
+                    - if signed_in? && session.user_attending?(current_user)
+                      div class="px-3 py-1 bg-orange-200 border-2 border-stone-900 text-xs font-bold rounded-lg shadow-[2px_2px_0px_0px_#1c1917] inline-block"
+                        = t('jam_sessions.index.you_are_attending')
+
+                    = render 'capacity_indicator', jam_session: session
 
   - else
     section.py-24.px-6.bg-amber-50.border-b-4.border-stone-900
@@ -64,7 +67,7 @@
         .grid.md:grid-cols-2.lg:grid-cols-3.gap-8
           - @past_sessions.each do |session|
             = link_to jam_session_path(id: session.id), class: 'block' do
-              article.bg-white.rounded-3xl.border-2.border-stone-900.shadow-[8px_8px_0px_0px_#1c1917].hover:translate-x-[2px].hover:translate-y-[2px].hover:shadow-[6px_6px_0px_0px_#1c1917].transition-all.overflow-hidden.group
+              article class="bg-white rounded-3xl border-2 border-stone-900 shadow-[8px_8px_0px_0px_#1c1917] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[6px_6px_0px_0px_#1c1917] transition-all overflow-hidden group"
                 .h-32.bg-stone-100.flex.items-center.justify-center.p-6.border-b-2.border-stone-900
                   .text-4xl.font-black.text-stone-600
                     = session.held_on.strftime('%d')

@@ -11,6 +11,8 @@ cs:
     rsvp_success: "Úspěšně jste se přihlásili k této akci! Váš profil je nyní odemčen pro ostatní účastníky."
     rsvp_error: "Nelze se přihlásit: %{error}"
     cancel_success: "Vaše přihláška byla zrušena."
+    joined_waitlist: "Byli jste přidáni na čekací listinu (pozice #%{position}). Budete informováni, pokud se uvolní místo."
+    promoted_from_waitlist: "Skvělé zprávy! Byli jste povýšeni z čekací listiny. Nyní se zúčastníte této akce!"
 
   jam_sessions:
     index:
@@ -24,10 +26,29 @@ cs:
       you_are_attending: "Účastníte se!"
       no_upcoming: "Žádné Nadcházející Akce"
       check_back_soon: "Brzy se podívejte zpět na naši další jam session"
+    capacity:
+      spots_remaining:
+        one: "1 místo zbývá"
+        few: "%{count} místa zbývají"
+        other: "%{count} míst zbývá"
+      full_waitlist: "Plné - Čekací listina k dispozici"
     show:
       rsvp_button: "Přihlásit se k Akci"
       cancel_rsvp: "Zrušit Přihlášku"
       sign_up_to_rsvp: "Zaregistrujte se"
+      join_waitlist: "Připojit se na čekací listinu"
+      leave_waitlist: "Opustit čekací listinu"
+      on_waitlist: "Jste na čekací listině"
+      waitlist_position: "Pozice: #%{position}"
+      spots_remaining:
+        one: "1 místo zbývá"
+        few: "%{count} místa zbývají"
+        other: "%{count} míst zbývá"
+      event_full: "Akce je plná"
+      waitlist_count:
+        one: "1 osoba na čekací listině"
+        few: "%{count} osoby na čekací listině"
+        other: "%{count} osob na čekací listině"
       attendees_title:
         one: "1 Účastník"
         few: "%{count} Účastníci"
@@ -60,3 +81,13 @@ cs:
       step_2: "Přihlaste se k akci, které se také účastní tato osoba"
       step_3: "Setkejte se osobně a odemkněte si navzájem profily!"
       browse_events: "Procházet Akce"
+
+  waitlist_mailer:
+    promotion_notification:
+      subject: "Jste mimo čekací listinu pro %{event}!"
+      greeting: "Ahoj %{name},"
+      body_html: "Skvělé zprávy! Uvolnilo se místo pro <strong>%{event}</strong> a byli jste povýšeni z čekací listiny. Nyní jste potvrzeni k účasti!"
+      body_text: "Skvělé zprávy! Uvolnilo se místo pro %{event} a byli jste povýšeni z čekací listiny. Nyní jste potvrzeni k účasti!"
+      profile_visibility: "Váš profil je nyní viditelný pro ostatní účastníky této akce."
+      view_event: "Zobrazit Detaily Akce"
+      closing: "Uvidíme se na jamu!"

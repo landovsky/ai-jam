@@ -81,3 +81,39 @@ This document captures insights from past implementations to improve future work
 
 - `/Users/tomas/git/projects/ai-jam/docs/style-guide.md` - All views correctly follow the brutalist design system (border-4 border-stone-900, rounded-3xl, shadow patterns)
 - I18n complete in both `/Users/tomas/git/projects/ai-jam/config/locales/en.yml` and `/Users/tomas/git/projects/ai-jam/config/locales/cs.yml`
+
+---
+
+## 2026-02-01 - ai-jam-oks - Epic 3: Event Engagement & Capacity
+
+### What worked well
+
+- **Database locking pattern for race conditions** in `/Users/tomas/git/projects/ai-jam/app/controllers/attendances_controller.rb` lines 8-9 uses `JamSession.transaction { jam_session.lock! }` to serialize concurrent RSVPs. This prevents exceeding capacity when multiple users RSVP simultaneously. Use this pattern for any resource with limited availability.
+
+- **Enum with string storage and prefix** in `/Users/tomas/git/projects/ai-jam/app/models/attendance.rb` line 6: `enum :status, { attending: 'attending', ... }, prefix: true, validate: true` stores human-readable values, avoids magic numbers, and generates scoped predicates (`status_attending?`). Follow this pattern for all Rails 8+ enums.
+
+- **Conditional COUNT for status-aware aggregation** in `/Users/tomas/git/projects/ai-jam/app/controllers/jam_sessions_controller.rb` line 7: `COUNT(CASE WHEN attendances.status = 'attending' THEN 1 END)` counts only specific statuses without N+1 queries. Use this when counting subsets of associations.
+
+- **WaitlistManagement concern** in `/Users/tomas/git/projects/ai-jam/app/models/concerns/waitlist_management.rb` cleanly encapsulates promotion logic with atomic transactions and locking (`attendances.waitlisted.lock.first`). Extracting domain logic to concerns keeps models focused.
+
+- **Validation conditioned on status** in Attendance model: `validates :waitlist_position, presence: true, if: :status_waitlisted?` and `absence: true, unless: :status_waitlisted?` ensures data integrity for state-dependent fields.
+
+### What to avoid
+
+- **Individual updates in loops for waitlist reordering** - The `reorder_waitlist_after_position` method in WaitlistManagement concern uses `find_each` with individual updates. For high-traffic events, consider `update_all('waitlist_position = waitlist_position - 1')` with a WHERE clause for bulk updates. Low priority since waitlists are typically small.
+
+- **Testing concurrent access in request specs** - The implementation handles race conditions, but the tests don't explicitly test concurrent scenarios (e.g., using threads or parallel requests). Consider adding integration tests that simulate concurrent RSVPs to the last spot.
+
+### Process improvements
+
+- **Planner should include "Add database locking" as a checklist item** when specifying any resource with limited availability (tickets, seats, inventory). The pattern `Model.transaction { instance.lock! }` should be standard for capacity-constrained resources.
+
+- **When adding enums with status tracking, always consider:**
+  1. What fields are required for each status (conditional validations)
+  2. What counts/queries need to be scoped by status
+  3. What visibility/privacy changes when status changes
+
+### Artifacts referenced
+
+- `/Users/tomas/git/projects/ai-jam/docs/style-guide.md` - All new views (capacity indicators, waitlist UI) follow brutalist design system
+- I18n complete with proper Czech pluralization (one/few/other) in both locale files

@@ -32,6 +32,7 @@
 
     / Interests Section
     - if @user.interests.present?
+      - interests_array = @user.interests.is_a?(String) ? (JSON.parse(@user.interests) rescue [@user.interests]) : @user.interests
       section.py-24.px-6.bg-white.border-b-4.border-stone-900
         .max-w-3xl.mx-auto
           .text-center.mb-12
@@ -41,7 +42,7 @@
               = t('profiles.show.unlocked_label')
 
           .flex.flex-wrap.gap-3.justify-center
-            - JSON.parse(@user.interests).each do |interest|
+            - interests_array.each do |interest|
               span.px-4.py-2.bg-purple-200.border-2.border-stone-900.text-stone-900.text-sm.font-bold.rounded-lg.shadow-[2px_2px_0px_0px_#1c1917]
                 = interest
 

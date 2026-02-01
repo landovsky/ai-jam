@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
+  body
+    h1 = t('waitlist_mailer.promotion_notification.greeting', name: @user.email)
+
+    p = t('waitlist_mailer.promotion_notification.body_html', event: @jam_session.title)
+
+    p = t('waitlist_mailer.promotion_notification.profile_visibility')
+
+    p
+      = link_to t('waitlist_mailer.promotion_notification.view_event'), jam_session_url(id: @jam_session.id)
+
+    p = t('waitlist_mailer.promotion_notification.closing')

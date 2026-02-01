@@ -1,0 +1,10 @@
+= t('waitlist_mailer.promotion_notification.greeting', name: @user.email)
+
+= t('waitlist_mailer.promotion_notification.body_text', event: @jam_session.title)
+
+= t('waitlist_mailer.promotion_notification.profile_visibility')
+
+= t('waitlist_mailer.promotion_notification.view_event')
+= jam_session_url(id: @jam_session.id)
+
+= t('waitlist_mailer.promotion_notification.closing')
