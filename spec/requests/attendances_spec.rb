@@ -93,6 +93,26 @@ RSpec.describe 'Attendances', type: :request do
           expect(attendance.status).to eq('attending')
         end
       end
+
+      context 'when event is in the past' do
+        let(:jam_session) { create(:jam_session, held_on: 1.week.ago.to_date) }
+
+        it 'does not create an attendance' do
+          expect {
+            post rsvp_jam_session_path(id: jam_session.id)
+          }.not_to change(Attendance, :count)
+        end
+
+        it 'redirects to the jam session show page' do
+          post rsvp_jam_session_path(id: jam_session.id)
+          expect(response).to redirect_to(jam_session_path(id: jam_session.id))
+        end
+
+        it 'sets an error flash message' do
+          post rsvp_jam_session_path(id: jam_session.id)
+          expect(flash[:alert]).to eq(I18n.t('attendances.event_ended'))
+        end
+      end
     end
 
     context 'when user is not authenticated' do
