@@ -3,11 +3,7 @@ class Attendance < ApplicationRecord
   belongs_to :jam_session
 
   # Status enum for attendance state
-  enum status: {
-    attending: 'attending',
-    waitlisted: 'waitlisted',
-    cancelled: 'cancelled'
-  }, _prefix: true
+  enum :status, { attending: 'attending', waitlisted: 'waitlisted', cancelled: 'cancelled' }, prefix: true
 
   validates :user_id, uniqueness: { scope: :jam_session_id, message: "has already RSVP'd to this event" }
   validates :role, inclusion: { in: %w[organizer attendee speaker], allow_nil: true }
