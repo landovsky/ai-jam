@@ -119,4 +119,4 @@ end
 ## Miscellaneous
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "solid_queue", "~> 1.2"
+gem "solid_queue", "~> 1.3"
