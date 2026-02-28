@@ -128,3 +128,4 @@ bin/kamal console
 - [Style Guide](docs/style-guide.md) — design system and component patterns
 - [Epic Specifications](docs/epics/) — detailed feature specs
 - [Community README](docs/AI%20Jam%20Community%20README.md) — the philosophy behind AI Jam
+- [Claude Code Showcase](docs/CLAUDE_CODE_SHOWCASE.md) — real examples of what CC can do on this project
