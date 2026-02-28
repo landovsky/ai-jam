@@ -1,0 +1,40 @@
+# syntax=docker/dockerfile:1
+
+# Development Dockerfile — use with docker-compose.yml
+# Production Dockerfile is the separate `Dockerfile` (used by Kamal)
+
+ARG RUBY_VERSION=3.4.7
+FROM docker.io/library/ruby:$RUBY_VERSION-slim
+
+# Rails app lives here
+WORKDIR /rails
+
+# Install system dependencies
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y \
+      build-essential curl git libvips libyaml-dev node-gyp \
+      pkg-config python-is-python3 && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+
+# Install Node.js
+ARG NODE_VERSION=22.21.0
+ARG YARN_VERSION=1.22.22
+ENV PATH=/usr/local/node/bin:$PATH
+RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz -C /tmp/ && \
+    /tmp/node-build-master/bin/node-build "${NODE_VERSION}" /usr/local/node && \
+    npm install -g yarn@$YARN_VERSION && \
+    rm -rf /tmp/node-build-master
+
+# Install foreman for Procfile.dev process management
+RUN gem install foreman
+
+# Install Ruby dependencies (cached layer — only re-runs when Gemfile changes)
+COPY Gemfile Gemfile.lock .ruby-version ./
+RUN bundle install
+
+# Install JS dependencies (cached layer — only re-runs when package.json changes)
+COPY package.json yarn.lock ./
+RUN yarn install
+
+# Default command: start dev server via foreman
+CMD ["bin/dev"]

@@ -1,0 +1,24 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "${PORT:-3210}:${PORT:-3210}"
+    volumes:
+      - .:/rails
+      - node_modules:/rails/node_modules
+      - bundle:/usr/local/bundle
+      - storage:/rails/storage
+    environment:
+      - RAILS_ENV=development
+      - PORT=${PORT:-3210}
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+
+volumes:
+  node_modules:
+  bundle:
+  storage:
