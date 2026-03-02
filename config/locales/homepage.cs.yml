@@ -2,35 +2,35 @@ cs:
   homepage:
     hero:
       brand: "AI Jam"
-      badge: "🧪 AI laboratoř"
-      title_html: "Přestali jsme sledovat. <br class='hidden md:block' />Tvoříme a sdílíme."
-      subtitle_html: "Číst o AI nestačí. <br /> Jediný způsob, jak těmto nástrojům porozumět, je <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>používat je</span>."
+      badge: "🧪 Živá laboratoř"
+      title_html: "Chyť vlnu. <br class='hidden md:block' />Tvoř s námi."
+      subtitle_html: "Nedebatujeme, jestli AI má smysl. <br /> <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>Používáme ho</span> — na reálných problémech, v reálném čase."
       cta_join: "Připojit se k Jamu"
       cta_how: "Jak to probíhá"
     how_it_works:
       title: "Jak Jamujeme"
       subtitle: "Vaříme a sdílíme AI recepty."
       step_1:
-        title: "1. Connect"
-        description: "Kolečko - rychlý přehled toho, co kdo zkoumá, nebo chce řešit. Ani přednáška, ani diskuse, jen signál."
+        title: "1. Lightning Talks"
+        description: "Pět minut, striktní timebox. Ukaž, co děláš — průlomy i slepé uličky. Žádné přednášky, jen signál."
       step_2:
-        title: "2. Brew"
-        description: "Rozdělíme se do týmů a řešíme konkrétní výzvy. Notebooky otevřené, tokeny hoří."
+        title: "2. Breakout Sessions"
+        description: "Skupiny podle témat — technické i explorativní. Vybíráš si sám, kam půjdeš. Notebooky otevřené, tokeny hoří."
       step_3:
-        title: "3. Show & Tell"
-        description: "Sdílíme naše zjištění, ukazujeme si demo (průlomy i slepé uličky)."
+        title: "3. Regroup & Share"
+        description: "Skupiny se sejdou a sdílí klíčové poznatky — zhuštěné na podstatu, aby z toho měli všichni."
     who_is_this_for:
       title: "Pro koho to je?"
-      subtitle: "Jsme pracovně heterogenní mix přátel, kolegů a zvědavých myslí."
+      subtitle: "Mindset je důležitější než skill level."
       pragmatist:
-        title: "Pragmatik"
-        description: "Chcete automatizovat nudné části své práce nebo života. Zajímají vás výsledky, ne hype."
+        title: "Stavitel"
+        description: "Víš, že AI je tam, kde potřebuješ být. Chceš ho aplikovat na reálné problémy — v práci, na projektech, v životě. Výsledky, ne hype."
       learner:
-        title: "Student"
-        description: "Jste unaveni z teoretického \"thought leadershipu\" a chcete praktické \"how-to\" znalosti."
+        title: "Průzkumník"
+        description: "Jsi na začátku cesty, ale jiskra tam je. Nehledáš kurz — hledáš lidi, se kterými na to přijdeš."
       imposter:
-        title: "Imposter"
-        description: "Toto je bezpečný prostor. Výslovně vítáme \"selhání\". Všichni na to přicházíme společně."
+        title: "Přispěvatel"
+        description: "Nejenom konzumuješ — přinášíš témata, sdílíš experimenty, facilituješ diskuze. Místnost je lepší, protože v ní jsi."
     recipes:
       title: "Galerie Receptů"
       subtitle: "Skutečné problémy vyřešené skutečnými lidmi."
@@ -50,14 +50,15 @@ cs:
         author: "Z AI Jam sezení 27. listopadu"
     join:
       title: "Cena za vstup je úsilí."
-      subtitle_html: "Abyste dostali pozvánku na další Jam, nemusíte platit peníze.<br /> Stačí přispět jedním \"Receptem\" nebo \"Experimentem.\""
-      note: "Může to být jednoduché. Může to být i selhání. Jen chceme vědět, že jste to zkusili."
-      form_title: "Požádat o pozvánku"
-      email_label: "E-mailová adresa"
-      recipe_label: "Váš experiment (Úspěch nebo Selhání)"
-      recipe_placeholder: "Popište problém, nástroj a co se stalo..."
-      recipe_hint: "Nepanikařte. Může to být jednoduché. \"Použil jsem AI k návrhu večeře...\""
-      submit: "Odeslat a požádat o pozvánku"
+      subtitle_html: "Žádný poplatek. Přines něco — recept, experiment, téma, nebo pomoc s organizací.<br /> Měníme účast za účast."
+      note: "Zvědavost vítáme. Pasivitu ne."
+      cta_start: "Začít onboarding"
+      form_title: "deprecated"
+      email_label: "deprecated"
+      recipe_label: "deprecated"
+      recipe_placeholder: "deprecated"
+      recipe_hint: "deprecated"
+      submit: "deprecated"
     footer:
       copyright: "Komunita AI Jam."
       about: "O nás"

@@ -12,8 +12,8 @@ en:
 
     index:
       title: "The Living Recipe Book"
-      subtitle: "Browse our collection of AI experiments, workflows, and learnings from the community."
-      create_recipe: "Share Your Recipe"
+      subtitle: "Real experiments, real workflows, real verdicts — contributed by the community."
+      create_recipe: "Contribute a Recipe"
       no_results: "No recipes found"
       no_results_hint: "Try adjusting your search or filters"
       clear_filters: "Clear Filters"
@@ -34,7 +34,7 @@ en:
       edit_recipe: "Edit Recipe"
 
     new:
-      title: "Share Your Recipe"
+      title: "Contribute a Recipe"
       subtitle: "Document your AI experiment or workflow for the community"
 
     edit:

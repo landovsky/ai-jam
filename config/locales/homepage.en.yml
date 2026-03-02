@@ -2,35 +2,35 @@ en:
   homepage:
     hero:
       brand: "AI Jam"
-      badge: "🧪 A Living Lab for AI"
-      title_html: "Stop Watching.. <br class='hidden md:block' />Start Building."
-      subtitle_html: "Reading about AI is not enough. <br /> The only way to understand these tools is to <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>use them</span>."
+      badge: "🧪 A Living Lab"
+      title_html: "Grab the Wave. <br class='hidden md:block' />Build Together."
+      subtitle_html: "We don't debate whether AI matters. <br /> We <span class='bg-orange-300 px-1 border border-stone-900 rounded-md shadow-[2px_2px_0px_0px_#1c1917]'>use it</span> — on real problems, in real time."
       cta_join: "Join the Jam"
       cta_how: "How it Works"
     how_it_works:
       title: "How We Jam"
       subtitle: "Maximize doing, minimize listening."
       step_1:
-        title: "1. Connect"
-        description: "A quick sync on what everyone is currently exploring. No long keynotes, just signal."
+        title: "1. Lightning Talks"
+        description: "Five minutes, strict timebox. Show what you're working on — breakthroughs and dead ends alike. No keynotes, just signal."
       step_2:
-        title: "2. Brew"
-        description: "We break into squads to tackle specific challenges. Laptops open, tools running."
+        title: "2. Breakout Sessions"
+        description: "Small groups form around topics — technical or exploratory. You pick where you go. Laptops open, tools running."
       step_3:
-        title: "3. Show & Tell"
-        description: "We share our findings—both the breakthroughs and the roadblocks."
+        title: "3. Regroup & Share"
+        description: "Groups reconvene and share key takeaways — distilled to the essentials so everyone benefits."
     who_is_this_for:
       title: "Who is this for?"
-      subtitle: "We are a mix of friends, colleagues, and curious minds."
+      subtitle: "The mindset matters more than the skill level."
       pragmatist:
-        title: "The Pragmatist"
-        description: "You want to automate the boring parts of your work or life. You care about results, not hype."
+        title: "The Builder"
+        description: "You know AI is where you need to be. You want to apply it to real problems — your work, your projects, your life. Results over hype."
       learner:
-        title: "The Learner"
-        description: "You are tired of theoretical \"thought leadership\" and want practical \"how-to\" knowledge."
+        title: "The Explorer"
+        description: "You're earlier in the journey but you've got the spark. You're not looking for a course — you're looking for people to figure it out with."
       imposter:
-        title: "The \"Imposter\""
-        description: "This is a safe space. We explicitly welcome \"failures\". We are all figuring this out together."
+        title: "The Contributor"
+        description: "You don't just consume — you bring topics, share experiments, facilitate discussions. The room gets better because you're in it."
     recipes:
       title: "Recipe Gallery"
       subtitle: "Real problems solved by real people."
@@ -49,9 +49,9 @@ en:
         description: "\"Attempted to generate conversational prompts from voice recordings. Mixed results—needs more tuning.\""
         author: "From AI Jam Session Nov 27"
     join:
-      title: "Ready to Jam?"
-      subtitle_html: "Join our community of builders. It starts with your interests."
-      note: "No pressure. Just curiosity."
+      title: "The Price of Admission Is Effort."
+      subtitle_html: "No fee. Just bring something — a recipe, an experiment, a topic, or help with organizing.<br /> We trade participation for participation."
+      note: "Curiosity is welcome. Passivity isn't."
       cta_start: "Start Onboarding"
       form_title: "deprecated"
       email_label: "deprecated"
