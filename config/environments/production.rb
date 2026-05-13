@@ -27,11 +27,10 @@ Rails.application.configure do
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
   # config.assume_ssl = true
 
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
-
-  # Skip http-to-https redirect for the default health check endpoint.
-  # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
+  # SSL is terminated at the K8s ingress controller — don't force SSL at the app level.
+  # Secure cookies are set explicitly so they're only sent over HTTPS.
+  config.force_ssl = false
+  config.session_options = { secure: true }
 
   # Log to STDOUT with the current request id as a default log tag.
   config.log_tags = [ :request_id ]
