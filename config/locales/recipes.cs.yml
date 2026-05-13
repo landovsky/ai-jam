@@ -12,8 +12,8 @@ cs:
 
     index:
       title: "Živá Kniha Receptů"
-      subtitle: "Procházejte naši sbírku AI experimentů, pracovních postupů a znalostí z komunity."
-      create_recipe: "Sdílet Váš Recept"
+      subtitle: "Reálné experimenty, reálné postupy, reálné verdikty — od komunity."
+      create_recipe: "Přispěj receptem"
       no_results: "Nebyly nalezeny žádné recepty"
       no_results_hint: "Zkuste upravit vyhledávání nebo filtry"
       clear_filters: "Vymazat Filtry"
@@ -34,7 +34,7 @@ cs:
       edit_recipe: "Upravit Recept"
 
     new:
-      title: "Sdílet Váš Recept"
+      title: "Přispěj receptem"
       subtitle: "Zdokumentujte svůj AI experiment nebo pracovní postup pro komunitu"
 
     edit:
