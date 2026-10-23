@@ -1,0 +1,41 @@
+# Outline: 03-03 AI Jam: příprava AI hackathonu
+
+- **[0:11 - 0:39]** Chvála AI news webu
+- **[0:41 - 1:15]** Agentní pipeline přes GitHub
+- **[1:15 - 1:56]** Audio funkcionalita a přehrávač
+- **[2:02 - 2:37]** TTS a infrastruktura cloud
+- **[2:37 - 3:38]** HW setup a orchestrátor
+- **[3:38 - 4:30]** Task queue a řízení úloh
+- **[4:30 - 5:07]** Napojení na GitHub issues
+- **[5:07 - 5:59]** Stav a cíle projektu
+- **[5:59 - 7:01]** Plán ukázky na AI Gymu
+- **[9:13 - 10:11]** Cíl programu a formát
+- **[10:15 - 11:45]** Kombinace lightning talks a hackathon
+- **[12:00 - 12:28]** Technická příprava předem
+- **[12:28 - 12:53]** Open‑source platforma zaměření
+- **[13:06 - 18:09]** Jedno téma vs více týmů
+- **[18:29 - 19:56]** Telegram skupiny a sešny
+- **[19:56 - 20:59]** Velikost skupin a organizace
+- **[20:59 - 22:14]** Fallback a klonování instancí
+- **[22:14 - 23:34]** Tokeny a náklady modelů
+- **[23:36 - 24:41]** Motivace účastníků hackathonu
+- **[25:29 - 26:51]** Varianta vlastní instance vs tým
+- **[26:51 - 28:08]** Sbírání témat a preference
+- **[28:08 - 29:21]** Role facilitátorů a podpory
+- **[29:21 - 31:09]** Praktická práce vs chatové ovládání
+- **[31:09 - 32:23]** Shrnutí formátu dne
+- **[33:00 - 35:07]** Skilly gap a mini školení
+- **[34:21 - 35:40]** Předřazený online onboarding
+- **[35:42 - 37:06]** Tématické skupiny podle cílů
+- **[37:09 - 38:36]** Use‑case orientace a pipeline
+- **[38:52 - 40:00]** Týmová efektivita a zkušenosti
+- **[40:31 - 41:48]** Viditelné výstupy hackathonu
+- **[41:49 - 43:45]** Enablery a připravené instance
+- **[43:45 - 45:18]** Pitch témat a zapojení všech
+- **[45:18 - 46:58]** Rozšíření účasti a pozvánky
+- **[47:12 - 48:23]** Registrace a kapacita akce
+- **[48:23 - 50:10]** Konečné shrnutí dohod
+- **[50:10 - 51:35]** Témata pro Square a pre‑školení
+- **[51:35 - 52:41]** VPS řešení pro vlastní instance
+- **[52:41 - 53:57]** Důraz na obsah a role lídra
+- **[53:57 - 55:41]** Úkoly: sběr témat a logistika

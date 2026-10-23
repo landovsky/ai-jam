@@ -1,0 +1,31 @@
+{
+  "class": "immutable",
+  "type": "transcript",
+  "title": "Jan Tobolík – propojení AI Jamu s komunitou Business as Code",
+  "date": "2026-10-15",
+  "event_date": "2026-10-15",
+  "category": "call",
+  "tags": [
+    "ai-jam",
+    "networking",
+    "business-as-code",
+    "umela-inteligence-cz",
+    "meetup",
+    "komunita",
+    "ai-native"
+  ],
+  "project": "default",
+  "language": "cs",
+  "duration": "33m",
+  "source": "wispr",
+  "wispr_id": "fc59f7c7-9f3a-44b3-a8d9-791eb10fffc2",
+  "raw_recording": {
+    "file_id": "fc59f7c7-9f3a-44b3-a8d9-791eb10fffc2",
+    "source": "wispr",
+    "filename": "Jan Tobolík / Tomáš Landovský",
+    "date": "2026-10-15",
+    "duration": 1992372,
+    "folder": null,
+    "start_time": 1792069264448
+  }
+}

@@ -1,0 +1,76 @@
+# Outline: 02-26 Týdenní schůzka: Sdílení zkušeností s AI, OpenClaw a Cloud Code
+
+- **[0:00 - 0:37]** Vznik a hodnota setkání
+- **[0:37 - 1:14]** Plány rozšíření skupiny
+- **[1:14 - 1:50]** Organizace a pravidla přenosu informací
+- **[1:50 - 2:21]** Role příjemce a odesílatele informací
+- **[2:21 - 2:53]** Různé levely a přínosy
+- **[2:53 - 3:24]** Důraz na actionable výstupy
+- **[3:24 - 4:02]** Agenda dne a check‑out plán
+- **[4:02 - 4:41]** Actionable next steps návrhy
+- **[4:41 - 5:45]** Rozšiřování a diverzita témat
+- **[5:45 - 6:28]** Plánování témat a formát
+- **[6:28 - 7:15]** Výběr lightning talků
+- **[7:15 - 8:38]** Formát lightning talků a technika
+- **[8:38 - 9:16]** Lightning talky a netechnická témata
+- **[9:16 - 10:17]** Technické vs. netechnické zaměření
+- **[10:17 - 11:30]** Obavy a změny v roli programátorů
+- **[11:30 - 12:30]** Diskuze o práci a kódu
+- **[12:30 - 13:23]** Volba prvního tématu
+- **[13:23 - 13:56]** Seznam lightning talků
+- **[13:56 - 14:24]** Priorita témat
+- **[14:24 - 16:41]** Technické potíže s připojením
+- **[16:41 - 18:31]** Nastavení sdílení obrazovky
+- **[18:31 - 20:50]** Úvod do OpenClaw
+- **[20:50 - 22:26]** Paměť, pluginy a bezpečnost
+- **[22:26 - 23:33]** Limity OpenClaw a Ironclad
+- **[23:33 - 25:23]** Víkendový use case a pipeline
+- **[25:23 - 26:44]** Orchestrace, limity LLM a náklady
+- **[26:44 - 28:28]** Instrukce vs. akce a příklad metadata
+- **[28:28 - 29:34]** Generování obrázků a skilly
+- **[29:34 - 31:17]** Shrnutí použitelnosti a bezpečí
+- **[31:17 - 33:31]** Návrh hackathonu asistenta
+- **[33:31 - 35:26]** Praktický use case: inbox hlídač
+- **[35:26 - 39:30]** Slack notifikace a datové dotazy
+- **[39:30 - 41:18]** Interface ve Slacku a přínosy
+- **[41:18 - 46:17]** Modely, limity a spotřeba tokenů
+- **[46:17 - 47:21]** Rozhodnutí pokračovat v OpenClaw
+- **[47:21 - 49:50]** Další témata: Golem a workflow
+- **[49:50 - 51:05]** Lightning intermezzo návrh
+- **[51:05 - 52:21]** Cloud Code prostředí problémy
+- **[52:21 - 5:33]** (pozn.)
+- **[5:33 - 1:01:22]** Přehled Cloud produktů
+- **[1:01:22 - 1:05:12]** Cloud Code Desktop vs Web vs SSH
+- **[1:05:12 - 1:06:33]** Co‑work a ovládání desktopu
+- **[1:06:33 - 1:08:37]** CLI režim a lokální projekty
+- **[1:08:40 - 1:12:22]** HAPI relay a vzdálený dohled
+- **[1:12:22 - 1:15:25]** Srovnání Web vs vlastní server
+- **[1:15:25 - 1:17:46]** Plánovací režim v Claude Code
+- **[1:17:46 - 1:19:30]** Gaps v generovaném kódu
+- **[1:19:30 - 1:21:57]** Golem workflow a konfigurace
+- **[1:21:57 - 1:25:09]** Týmy agentů a zkušenosti
+- **[1:25:09 - 0:00]** (pozn.)
+- **[0:00 - 1:33:43]** Continuous vývoj a specifikace
+- **[1:33:43 - 1:36:33]** Volba fokus tématu
+- **[1:36:33 - 1:38:09]** Návrhy budoucích case studies
+- **[1:38:09 - 1:40:19]** Plán diskuze a témata
+- **[1:40:19 - 1:42:50]** Use cases k automatizaci
+- **[1:42:50 - 1:46:27]** Facilitace volby tématu
+- **[1:46:27 - 1:47:47]** Delegace výběru tématu
+- **[1:47:47 - 1:50:20]** Asistentka a exekuce nápadů
+- **[1:50:20 - 1:52:05]** Bounded vs unbounded přístup
+- **[1:52:05 - 1:54:41]** Rozhodnutí o příštím workshopu
+- **[1:54:41 - 1:56:32]** Case: Automatizace účetnictví
+- **[1:56:32 - 1:59:14]** Zpracování inboxu Fakturoid
+- **[1:59:14 - 2:02:21]** Rekonciliace plateb a pravidla
+- **[2:02:21 - 2:04:46]** CSV z banky a kontrola
+- **[2:04:46 - 2:06:45]** Role účetní vs automatizace
+- **[2:06:45 - 2:08:36]** API, tokeny a bezpečnost
+- **[2:08:36 - 2:11:58]** Implementace Toggle reportu
+- **[2:11:58 - 2:16:26]** Vytvoření skillu pro fakturaci
+- **[2:16:26 - 2:19:20]** Testování skillu a výstupy
+- **[2:19:20 - 2:21:23]** Navázání na fakturaci
+- **[2:21:23 - 2:24:06]** Dekompozice skillů a reuse
+- **[2:24:06 - 2:25:49]** Asistent vs agenda agenti
+- **[2:25:50 - 2:27:30]** OpenClaw jako orchestrátor
+- **[2:27:30 - 2:29:10]** Závěr a domluva na oběd

@@ -1,0 +1,20 @@
+{
+  "file_id": "c8ca240e6fd551944b3b32ff73766ebe",
+  "filename": "03-26 Hackaton: prezentace výsledků",
+  "duration": 2672000,
+  "duration_human": "44m",
+  "start_time": 1774537833000,
+  "start_date": "2026-03-26",
+  "scene": 1,
+  "serial_number": "888316970075488883",
+  "folder": "AI Jam",
+  "version_ms": 1774944746567,
+  "downloaded_at": "2026-04-01T09:27:17.757035+00:00",
+  "files": [
+    "transcript.md",
+    "outline.md",
+    "summary.md",
+    "meeting-minutes.md",
+    "meeting-highlights.md"
+  ]
+}

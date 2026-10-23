@@ -1,0 +1,103 @@
+# Outline: 04-30 Souhrn AI Hackathonu: Od úvodních nápadů po finální prezentace
+
+- **[0:05 - 1:20]** Úvod setkání a AI záměr
+- **[1:20 - 1:56]** Formát akce a cíle sdílení
+- **[1:57 - 2:31]** Plán dopoledního programu
+- **[2:32 - 3:16]** Tipy k práci ve skupinách
+- **[3:16 - 3:51]** Organizace skupin a rychlé představení
+- **[3:51 - 4:23]** Skála rychlé kolečko a energie
+- **[4:24 - 5:34]** Kolečko účastníků—pocit vlaku
+- **[5:34 - 6:53]** Další představení a energie
+- **[6:53 - 7:58]** Debata: korelace pocitu s investicí
+- **[7:58 - 9:01]** Zkratky a dohánění AI vlaku
+- **[9:01 - 10:07]** Sbírání témat—popcorn styl
+- **[10:07 - 10:42]** Slack notifikace a koordinace
+- **[10:42 - 12:19]** Téma: AI hygiena a hranice použití
+- **[12:19 - 14:59]** Téma: Vizuální edukační hra s loutkami
+- **[14:59 - 16:48]** Cíl: Základ hry a hledání parťáka
+- **[16:53 - 18:38]** Téma: AI pro design a marketing
+- **[18:38 - 19:45]** Téma: Diviacio a analýza dat v R
+- **[19:45 - 21:33]** Interaktivní prezentace výzkumu
+- **[21:33 - 22:47]** Role vizuálu a interakce ve výzkumu
+- **[22:52 - 23:59]** Téma: Chatbot pro laboratorní položky
+- **[23:59 - 25:11]** AI hodnotící fotky—emoce vs estetika
+- **[25:14 - 26:34]** Knihy z fotek a východní Evropa focus
+- **[26:34 - 28:37]** Téma: Osobní asistent a orchestrace
+- **[28:39 - 30:11]** Nabídka lightning talků a cloud skills
+- **[30:11 - 32:23]** Diskuze: Pricing s AI a budoucnost
+- **[32:28 - 33:34]** Cloud CoWork zkušenosti a hry
+- **[33:34 - 34:41]** Rozdělení do skupin a cíle práce
+- **[34:41 - 36:52]** Volba témat jednotlivci a skupiny
+- **[36:54 - 39:02]** Praktické pokyny k prostorám
+- **[39:02 - 40:08]** Lightning talk setup—AirPlay
+- **[40:45 - 41:53]** Slack přístup a přidání uživatele
+- **[41:53 - 46:38]** LT: Google Analytics s Claude MCP
+- **[46:38 - 48:20]** Changelog a clarity promptů
+- **[48:20 - 50:45]** Trendy sign-upů a reporty v GA
+- **[51:05 - 53:26]** Analýza onboardingu a kampaní
+- **[53:27 - 56:04]** Validita dat a interpretace
+- **[56:07 - 58:15]** Náklady, plány a usage v Cloudu
+- **[58:49 - 1:00:32]** CoWork vs Cloud for Web klikání
+- **[1:00:33 - 1:02:11]** Retrospektiva a zlepšování skillů
+- **[1:02:11 - 1:04:42]** Tokeny, účty a limity modelů
+- **[1:04:42 - 1:07:30]** Diskuze: nákladovost LLM a ztrátovost
+- **[1:07:30 - 1:08:53]** Plán práce: design, asistent, marketing
+- **[1:08:54 - 1:10:46]** LT: Pricing s AI—etika a hodnota
+- **[1:10:47 - 1:12:35]** Budoucnost: více práce, nižší ceny
+- **[1:12:35 - 1:14:22]** Zběžnění zakázkového vývoje
+- **[1:14:22 - 1:16:15]** Analog: taxi trh a kvalita služby
+- **[1:16:15 - 1:18:13]** Kvalita, garance a důvěra v dodavatele
+- **[1:18:13 - 1:20:02]** Velké zakázky a podíl kódění
+- **[1:20:02 - 1:22:07]** SaaS vs zakázka a náklady
+- **[1:22:07 - 1:24:21]** PoC 80% a poptávka
+- **[1:24:21 - 1:26:10]** Role programátorů a seniorita
+- **[1:26:11 - 1:28:04]** Shrnutí závěrů pricing diskuze
+- **[1:28:04 - 1:29:20]** Přesun, kafe, marketing focus
+- **[1:29:20 - 1:30:49]** Zapojení do design/marketing a setup
+- **[1:30:50 - 1:32:05]** CoWork—productivity skilly a složky
+- **[1:32:05 - 1:34:25]** Asistent: nákupy a hlasové ovládání
+- **[1:34:25 - 1:35:54]** Orchestrace přes Google Assistant
+- **[1:36:27 - 1:37:54]** Kalendář a plánování přes AI
+- **[1:38:00 - 1:39:37]** Propojení OK Google a workflow
+- **[1:39:54 - 1:41:29]** Osobní tasky a telefonní domluvy
+- **[1:41:29 - 1:42:39]** Claude app a přístupy
+- **[1:43:49 - 1:44:59]** Instalace Claude a účty
+- **[1:46:00 - 1:47:19]** Díky a mini odmlka
+- **[1:50:18 - 1:51:05]** Email pomocí Claude
+- **[1:52:16 - 1:53:41]** Chrome vs Firefox a dotazy
+- **[1:59:39 - 2:00:48]** Working folder a přístup k souborům
+- **[2:00:20 - 2:02:18]** Bezpečnost firemních dat
+- **[2:04:18 - 2:04:50]** Orchestrace rychlejší než ručně
+- **[2:07:31 - 2:08:00]** CoWork propojení a kalendář
+- **[2:12:29 - 2:13:50]** Přechod na práci s asistenty
+- **[2:14:44 - 2:15:35]** Test malých integrací
+- **[2:17:45 - 2:19:20]** Kredity, usage a pojmenování
+- **[2:19:20 - 2:20:43]** Git vs Drive pro projekty
+- **[2:20:43 - 2:23:29]** Sync složek a nástroje
+- **[2:23:29 - 2:24:30]** Přihlášení více účtů Claude
+- **[2:25:16 - 2:26:15]** Jazykové návyky modelu
+- **[2:27:09 - 2:28:10]** Organizace: závěr a oběd
+- **[2:28:41 - 2:31:01]** Závěry: pricing a specializace modelů
+- **[2:31:01 - 2:32:35]** Model orchestrace a tokeny
+- **[2:32:58 - 2:37:10]** LT: Cloud Design—prototyp UI
+- **[2:37:10 - 2:39:41]** Import design systému z Figma
+- **[2:39:41 - 2:41:18]** Výstupy: HTML/JSX a aset
+- **[2:41:18 - 2:42:57]** Usage a limity Cloud Design Max
+- **[2:43:30 - 2:44:33]** Konzultace pipeline a assety
+- **[2:44:34 - 2:46:32]** Copilot 3D a Game Studios skill
+- **[2:46:34 - 2:48:45]** Godot ukázka rytmické hry
+- **[2:48:45 - 2:50:24]** Tuning hry—rytmy a parametry
+- **[2:50:26 - 2:52:09]** Live ladění zvuku a UI slider
+- **[2:52:09 - 2:53:21]** Flow: Claude + Godot integrace
+- **[2:53:21 - 2:53:56]** Estetika her—INSIDE inspirace
+- **[2:53:56 - 2:54:28]** Role animátora a lidského faktoru
+- **[2:54:28 - 2:57:04]** Chatbot pro NČLP—use case a demo
+- **[2:56:34 - 2:57:48]** RAG postupy a halucinace kontrola
+- **[2:57:48 - 2:58:51]** Serverové API a produkční limity
+- **[2:58:51 - 2:59:55]** ToS a provoz přes Max účet
+- **[2:59:57 - 3:00:31]** OpenAI-like endpoint a messages
+- **[3:00:31 - 3:01:20]** Chyby a napojení na web
+- **[3:01:21 - 3:02:36]** Automode vs permissions v CoWork
+- **[3:02:49 - 3:05:17]** Deviat.io—novinky a rozhraní
+- **[3:05:18 - 3:07:36]** Design: interaktivní shrnutí a inspirace
+- **[3:08:14 - 3:08:36]** Uzavření, poděkování a další termín

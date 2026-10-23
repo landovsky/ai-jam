@@ -1,0 +1,38 @@
+# Outline: AI jam příprava s Radkem Feb 28 at 13-41
+
+- **[0:00 - 0:07]** Úvod k AI Gymu
+- **[0:07 - 2:08]** Přizvání účastníků a drift
+- **[2:08 - 3:13]** Inkluze vs. výkon spektrum
+- **[3:13 - 4:46]** Osobní hranice inkluze
+- **[4:46 - 6:47]** Laťka vstupu a formát
+- **[6:47 - 8:25]** Barcamp rozdělení a facilitace
+- **[8:25 - 10:18]** Inkluze skrz breakout skupiny
+- **[10:18 - 11:49]** Sdílení výstupů a base level
+- **[11:24 - 12:13]** Dopady diverzity na tempo
+- **[12:13 - 13:40]** Zodpovědnost účastníka za volbu
+- **[13:40 - 15:15]** Diverzita jako klíčový nástroj
+- **[14:34 - 16:23]** Mission statement a cílovka
+- **[16:23 - 18:01]** Spodní hranice a mindset účasti
+- **[18:01 - 18:40]** Hodnota pro vyšší úroveň
+- **[18:40 - 20:12]** Definice spodní hranice a aktivita
+- **[20:12 - 21:23]** Témata pro nováčky a facilitace
+- **[21:23 - 22:45]** Přístup k pasivním účastníkům
+- **[22:45 - 23:47]** Změny na příště minimálně
+- **[23:47 - 25:13]** Témata a RSVP zkušenost
+- **[25:13 - 26:04]** Přísnost a důsledky pravidel
+- **[26:04 - 26:53]** Osobní odpovědnost za bubu
+- **[26:53 - 28:27]** Návrh hackathonu místo barcampu
+- **[28:27 - 29:53]** Zapojení dalších do přípravy
+- **[29:53 - 31:02]** Lightning talky a timebox
+- **[31:02 - 32:01]** Struktura: LT, intro, volba tracků
+- **[32:01 - 33:10]** Přechod komunikace na Slack
+- **[33:10 - 34:41]** Kapacita, místo a škálování
+- **[34:41 - 36:02]** Termín 26. a Uplifting možnost
+- **[36:02 - 37:25]** Alternativní prostory a potřeby
+- **[37:25 - 38:57]** Rychlá organizace prostoru
+- **[38:57 - 40:03]** Dotazy do kanálu a Slack setup
+- **[40:03 - 41:04]** Financování prostoru a commitment
+- **[41:04 - 41:58]** Potvrzení místa a kalendář
+- **[41:58 - 43:14]** Role v komunikaci a oznámení
+- **[43:14 - 44:22]** Obsah oznámení: hackathon, místo
+- **[44:22 - 45:12]** Kanály na Slacku a rušení automatizací

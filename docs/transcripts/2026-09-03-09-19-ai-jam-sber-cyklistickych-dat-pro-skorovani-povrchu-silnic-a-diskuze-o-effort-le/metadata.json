@@ -1,0 +1,28 @@
+{
+  "title": "AI Jam: sběr cyklistických dat pro skórování povrchu silnic a diskuze o effort levelech",
+  "date": "2026-09-03",
+  "type": "meeting",
+  "tags": [
+    "ai-jam",
+    "machine-learning",
+    "effort-level",
+    "cyklistika",
+    "data-collection",
+    "pojmoslovi",
+    "training-loop"
+  ],
+  "project": "default",
+  "language": "cs",
+  "duration": "2h 23m",
+  "source": "plaud",
+  "plaud_id": "5add5b843045bc61e9e5f02d81a36ca9",
+  "raw_recording": {
+    "file_id": "5add5b843045bc61e9e5f02d81a36ca9",
+    "source": "plaud",
+    "filename": "2026-09-03 09:19:45",
+    "date": "2026-09-03",
+    "duration": 8595000,
+    "folder": null,
+    "start_time": 1788419985000
+  }
+}

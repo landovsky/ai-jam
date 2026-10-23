@@ -1,0 +1,112 @@
+# Outline: 06-04 AI Jam
+
+- **[0:00 - 0:37]** Úvod a formát setkání
+- **[0:58 - 1:30]** Sbírání témat a seskupení
+- **[1:30 - 2:09]** Plán práce a závěrečná prezentace
+- **[2:09 - 2:49]** Koordinace témat, technické nastavení
+- **[3:03 - 3:38]** Pravidla prezentace témat
+- **[8:43 - 9:22]** Návrat k původnímu setupu
+- **[9:22 - 10:06]** Téma: AI agenti – záměr
+- **[10:06 - 10:18]** Shrnutí: Orchestrace agentů
+- **[10:29 - 11:49]** Use case: Datové řešení s agenty
+- **[11:52 - 12:47]** Definice AI agentů a architektura
+- **[12:52 - 13:32]** Seskupení zájemců k agentům
+- **[13:36 - 14:43]** Téma: Komunitní sámoška – design proces
+- **[15:04 - 15:53]** Přidávání k tématům
+- **[16:38 - 17:10]** Další zájem o sámošku
+- **[17:14 - 18:11]** Téma: Zjednodušení Slacku hlasem
+- **[18:13 - 19:13]** Diskuze: Hlasové odpovědi ve Slacku
+- **[19:40 - 20:38]** Benchmarky a testy hardware
+- **[20:40 - 22:23]** Validace analýz a důvěra v závěry
+- **[22:41 - 23:55]** Přístupy k datové analýze a generování kódu
+- **[24:03 - 24:33]** Upřesnění tématu analýzy dat
+- **[24:37 - 25:04]** Přidání se k analýzám
+- **[25:04 - 26:55]** Téma: Prezentace v době AI
+- **[26:55 - 28:06]** Způsob přípravy témat a deliverables
+- **[28:06 - 29:19]** Cíle: deliverables a zapojení
+- **[29:19 - 30:31]** Definice výstupu pro prezentace s AI
+- **[30:44 - 31:32]** Rozdělení do skupin a kapacita
+- **[31:32 - 33:08]** Seskupení k agentům a pravidla přechodů
+- **[33:08 - 34:26]** Časový plán práce a lightning talks
+- **[34:26 - 35:32]** Agentní blok: definice a deliverables
+- **[35:32 - 36:53]** Use cases vhodné pro agentní přístup
+- **[36:53 - 38:15]** Workflow: role, routing, orchestrace
+- **[38:15 - 39:52]** Základní definice agenta: model, kontext, tools
+- **[39:52 - 41:23]** Chat vs agent, tool-use a kontext
+- **[41:24 - 43:01]** Komponenty agenta a specializace
+- **[43:01 - 44:15]** Interakce agentů a architektury
+- **[44:15 - 45:56]** Agent vs agentský systém a autonomie
+- **[45:58 - 48:17]** Komplexita multi-agentů a vizibilita
+- **[48:19 - 49:32]** Deliverables: zorientovat se vs vytvořit agenta
+- **[49:32 - 51:08]** Typy toolů: systémové, API, MC server
+- **[51:11 - 52:29]** Diskuze: vliv agenského prostředí vs model
+- **[52:29 - 54:08]** Kodovací agenty: kontext a schopnosti
+- **[54:08 - 55:56]** Příklad: dětské pohádky, decision points
+- **[55:56 - 58:17]** Role, kompetence a oddělení přístupů
+- **[58:17 - 1:01:01]** Modely vs agenské prostředí, výkon a kontext
+- **[1:01:08 - 1:02:23]** Různý výkon modelů dle úloh
+- **[1:02:33 - 1:03:53]** Návrh: demonstrovat předávání mezi rolemi
+- **[1:03:53 - 1:05:42]** Sepsání use cases a nástrojů (LangChain vs Pydantic)
+- **[1:05:42 - 1:08:04]** Kdy použít agenty: komplexní články, verifikace
+- **[1:08:18 - 1:09:48]** Systematické nasazení vs jednorázový chat
+- **[1:09:48 - 1:10:42]** Skilly v chatu a agentičnost
+- **[1:10:44 - 1:11:58]** Čistota kontextu a rozdělení rolí
+- **[1:11:58 - 1:13:19]** Agent vs agentský systém: definice
+- **[1:13:19 - 1:14:41]** Indikátory pro použití agentů
+- **[1:14:41 - 1:16:05]** Pevné workflow vs autonomní předávání
+- **[1:16:08 - 1:18:10]** Rekapitulace indikátorů a příklad psaní článků
+- **[1:18:10 - 1:19:59]** Quality assurance a řízení workflow
+- **[1:19:59 - 1:21:49]** Use case: výrobní data a benchmarking
+- **[1:21:49 - 1:23:37]** Rozdělení agentů: databáze, webresearch, syntéza
+- **[1:23:40 - 1:24:58]** Kdy agenty nestačí, mix skriptů a AI
+- **[1:24:58 - 1:26:24]** Zvolit jednoduchý společný demo use case
+- **[1:26:24 - 1:27:42]** Alternativa: generování obsahu s groundingem
+- **[1:27:42 - 1:30:09]** Debata: deep research a vlastní parametry
+- **[1:30:10 - 1:32:05]** Výběr demo: plánování výletu, kroky workflow
+- **[1:32:05 - 1:33:48]** Připrava promptů a inputs pro demo
+- **[1:34:09 - 1:34:49]** Upřesnění: doporučení destinace podle preferencí
+- **[1:35:47 - 1:36:36]** Sdílení přes Slack a technické přístupy
+- **[1:36:52 - 1:38:12]** Kontrakt pro handoff mezi agenty
+- **[1:38:13 - 1:39:48]** Volba nástrojů: Flowwise, Paperclip, Pydantic
+- **[1:39:50 - 1:40:45]** Rozdělení nástrojů mezi účastníky
+- **[1:40:54 - 1:43:04]** Flowwise setup: API klíče a modely
+- **[1:43:14 - 1:44:39]** Nastavení Flowwise: agents flows a chat
+- **[1:44:45 - 1:46:09]** Tvorba workflow ve Flowwise
+- **[1:46:13 - 1:47:01]** Průběžné ladění a Pydantic poznámky
+- **[1:48:10 - 1:51:08]** Flowwise: přidání nástrojů a validace
+- **[1:51:40 - 1:53:53]** Test: preference collector a messages flow
+- **[1:53:53 - 1:55:19]** Ladění vstupů a output routingu
+- **[1:56:10 - 1:57:47]** Technické pauzy a pokusy
+- **[1:58:07 - 1:59:40]** Testování chování agentů
+- **[1:59:45 - 2:01:07]** Diagnostika flow a memory typů
+- **[2:01:16 - 2:02:40]** Výstupy itineráře a reflexe propojení
+- **[2:03:26 - 2:04:39]** Paperclip příliš složitý, změna na skill
+- **[2:05:02 - 2:06:39]** Příprava na závěrečné prezentace
+- **[2:07:24 - 2:08:32]** Organizace prezentací týmů
+- **[2:08:59 - 2:10:31]** Příprava dem ukázek
+- **[2:11:23 - 2:12:55]** Stav dem: plánování tripu a poznatky
+- **[2:13:29 - 2:14:27]** Přesun k závěrečným prezentacím
+- **[2:14:27 - 2:15:33]** Zahájení lightning talks
+- **[2:16:43 - 2:18:46]** Počet prezentací a koordinace
+- **[2:18:47 - 2:20:56]** Prezentace: AI agenti – definice a indikátory
+- **[2:20:57 - 2:22:02]** Doplnění: čistota kontextu a procesy
+- **[2:22:02 - 2:24:00]** Demo: plánování výletu – zkušenosti
+- **[2:24:12 - 2:25:37]** Prezentace: Komunitní sámoška – design sprint
+- **[2:25:37 - 2:26:38]** Výstupy prototypů a testování
+- **[2:26:38 - 2:28:10]** Reflexe procesu a tlak času
+- **[2:28:10 - 2:29:31]** Empatie a kontext pro AI nástroje
+- **[2:29:31 - 2:30:55]** Závěry a balení kontextu pro různé tooly
+- **[2:30:55 - 2:32:44]** Prezentace: Analýza callů, paterny pro roadmapu
+- **[2:32:46 - 2:34:34]** Srovnání: Webkoda, Anthropic API, Notebook LLM
+- **[2:34:34 - 2:35:58]** Poučení: ladění promptu a rozbití na agenty
+- **[2:35:58 - 2:37:24]** Závěrečné hodnocení přínosu a edukace
+- **[2:37:28 - 2:38:26]** Feedback: příprava témat a čas
+- **[2:38:34 - 2:39:55]** Hodnocení: definice agentů a rychlé prototypy
+- **[2:40:00 - 2:40:58]** Hodnocení: design cykly a předávání
+- **[2:41:05 - 2:42:26]** Hodnocení: pedagogická vrstva a čas
+- **[2:42:29 - 2:43:55]** Hodnocení: prototyp vs učení se nástrojům
+- **[2:43:55 - 2:45:54]** Hodnocení: učení, příprava a náklady analýz
+- **[2:45:57 - 2:47:17]** Shrnutí, prodloužení času akce – návrhy
+- **[2:47:17 - 2:48:38]** Diskuze: vhodné prodloužení do jedné
+- **[2:48:39 - 2:49:25]** Efektivita: příprava témat šetří čas
+- **[2:49:36 - 2:49:54]** Závěr: ukázka Cloudu a řešení problémů

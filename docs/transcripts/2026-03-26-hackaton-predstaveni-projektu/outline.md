@@ -1,0 +1,23 @@
+# Outline: 03-26 Hackaton: představení projektů
+
+- **[0:00 - 0:31]** Inspirace projektu a srovnávání se
+- **[0:31 - 1:22]** Motivace a hackathon kontext
+- **[1:25 - 2:01]** Cíl: demo a workflow
+- **[2:01 - 2:33]** Aplikace: porovnání v reálném čase
+- **[2:38 - 3:19]** Otevřenost briefu a výsledek dne
+- **[3:19 - 4:04]** Takeaway vs. produktový výstup
+- **[4:04 - 4:45]** Use case: HR dotazníky hravou formou
+- **[4:45 - 5:05]** Plán: úvodní story a další pitch
+- **[5:05 - 5:12]** Zájem o projekt
+- **[5:16 - 5:23]** Start časovače
+- **[5:23 - 8:51]** Pitch: Orchestrace agentů
+- **[8:56 - 8:57]** Shánění týmu
+- **[9:05 - 10:01]** Organizace: prezentace a harmonogram
+- **[10:01 - 12:37]** Pitch: Dětská wellbeing apka
+- **[12:37 - 12:55]** Forma modulů a cvičení
+- **[12:55 - 13:26]** Upřesnění zaměření
+- **[13:37 - 14:32]** Rychlý průzkum rolí
+- **[14:32 - 16:43]** Pitch: Nástroj pro testování her (Godot)
+- **[16:55 - 17:20]** Přerozdělení do projektů a dotazy
+- **[17:21 - 18:30]** Oběd, contribution, objednávky
+- **[18:30 - 19:08]** Začátek práce a pozvánka na večer

@@ -1,0 +1,30 @@
+{
+  "title": "Co čteme místo kódu: vrstva zodpovědnosti v agentickém vývoji",
+  "date": "2026-09-01",
+  "type": "developer-sync",
+  "tags": [
+    "ai-vývoj",
+    "code-review",
+    "dokumentace",
+    "agentický-vývoj",
+    "abstrakce",
+    "md-canvas",
+    "mutation-testing",
+    "ai-jam-téma"
+  ],
+  "project": "AI Jam",
+  "language": "cs",
+  "duration": "1h 35m",
+  "source": "wispr",
+  "wispr_id": "c5b19566-fc8b-4e39-961d-916d62ce0c7a",
+  "instructions": "This was more of a private chat and a personal thing than something project-related, but we had a really interesting discussion about code reading or not. What in our profession replaces code reading, and what are some of the ways that we as humans can ensure the software is functioning properly without reading the code?\n\nI would like you to focus on this part of the conversation and build good quality, cohesive text that captures the ideas and examples that were said in a way that nicely reads and can be shared with others for provoking their thoughts on this topic. It should not invent new ideas, but it should skillfully put it together in a well-readable way.",
+  "raw_recording": {
+    "file_id": "c5b19566-fc8b-4e39-961d-916d62ce0c7a",
+    "source": "wispr",
+    "filename": "sync Péťa / Tomáš",
+    "date": "2026-09-01",
+    "duration": 5736867,
+    "folder": null,
+    "start_time": 1788271192664
+  }
+}

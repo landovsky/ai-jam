@@ -1,0 +1,20 @@
+{
+  "file_id": "d098480f29a97ec0233012c725048094",
+  "filename": "Příprava na AI Jam",
+  "duration": 418000,
+  "duration_human": "6m",
+  "start_time": 1771007764000,
+  "start_date": "2026-02-13",
+  "scene": 101,
+  "serial_number": "861dcbee060d34c60accb5feb08cb13b-1771007766019-7636",
+  "folder": "AI Jam",
+  "version_ms": 1771442825076,
+  "downloaded_at": "2026-04-01T09:31:39.955044+00:00",
+  "files": [
+    "transcript.md",
+    "outline.md",
+    "task-assignment.md",
+    "meeting-minutes.md",
+    "meeting-highlights.md"
+  ]
+}

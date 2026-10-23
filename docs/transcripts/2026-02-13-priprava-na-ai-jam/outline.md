@@ -1,0 +1,22 @@
+# Outline: Příprava na AI Jam
+
+- **[0:00 - 0:12]** Úvod a kontext
+- **[0:12 - 0:29]** Volba místa akce
+- **[0:29 - 1:08]** Sbírka témat v Google Sheetu
+- **[1:08 - 1:34]** Hlasování a oznámení témat
+- **[1:34 - 2:10]** Role garanta/facilitátora
+- **[2:10 - 2:30]** Agenda a očekávání účastníků
+- **[2:30 - 2:31]** Shrnutí očekávání
+- **[2:31 - 2:44]** Low‑effort přístup s Google Sheetem
+- **[2:44 - 3:00]** Seznam nominantů a LinkedIn profily
+- **[3:00 - 3:30]** Kompaktní intro kolečko
+- **[3:30 - 4:03]** Podpora aktivity účastníků
+- **[4:03 - 4:33]** Neformální facilitace témat
+- **[4:33 - 4:41]** Krátká facilitace diskuze
+- **[4:41 - 5:14]** Místo v Upliftingu a nápad na demíčka
+- **[5:14 - 5:16]** Krátké demo formát
+- **[5:16 - 5:56]** Show and tell formát
+- **[5:56 - 6:01]** Volba formátu u témat
+- **[6:01 - 6:31]** Délka témat a volby
+- **[6:31 - 6:38]** Příklady dobrého popisu
+- **[6:38 - 6:52]** Seed témata a uzavření

@@ -1,0 +1,34 @@
+{
+  "class": "immutable",
+  "type": "transcript",
+  "title": "Radek: kde jsi v AI hypu – checkpointy sessions a úrovně autonomie agentů",
+  "date": "2026-10-23",
+  "event_date": "2026-10-23",
+  "category": "interview",
+  "tags": [
+    "ai-hype",
+    "pět-poloh",
+    "human-in-the-loop",
+    "checkpoint",
+    "autonomie-agentů",
+    "gates",
+    "claude-code",
+    "kognitivní-zátěž",
+    "meetup-pitch",
+    "kopernici"
+  ],
+  "project": "AI Jam",
+  "language": "cs",
+  "duration": "13m",
+  "source": "wispr",
+  "wispr_id": "d23aff57-749a-4446-9212-2160e7ce6886",
+  "raw_recording": {
+    "file_id": "d23aff57-749a-4446-9212-2160e7ce6886",
+    "source": "wispr",
+    "filename": "Radek kde jde v AI Hypu?",
+    "date": "2026-10-23",
+    "duration": 829729,
+    "folder": null,
+    "start_time": 1792748296849
+  }
+}

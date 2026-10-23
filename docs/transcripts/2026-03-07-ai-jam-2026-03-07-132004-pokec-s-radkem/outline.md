@@ -1,0 +1,37 @@
+# Outline: AI Jam 2026-03-07 13.20.04 pokec s Radkem 
+
+- **[0:01 - 0:02]** Zahájení hovoru
+- **[0:03 - 0:14]** Úvod k hackathonu
+- **[0:14 - 0:45]** Role a průnik s AI Jamem
+- **[0:46 - 0:51]** Potvrzení záměru a flexibilita
+- **[0:55 - 1:02]** Návaznost na AI Jam
+- **[1:02 - 1:32]** Důvody omezení zapojení
+- **[1:33 - 3:26]** Důvody: kapacita a vlastnictví
+- **[3:30 - 3:43]** Kontrola komunikace na Slacku
+- **[3:43 - 4:32]** Předání návrhu a drive
+- **[4:33 - 5:01]** Nástroje: listy a pitch
+- **[5:01 - 5:33]** Šablony projektů a přístupy
+- **[5:34 - 6:27]** Oprávnění a editace ve Slacku
+- **[6:29 - 7:25]** Slack jako platforma a onboarding
+- **[7:25 - 8:35]** Vyjasnění: AI Jam vs Hackathon
+- **[8:35 - 9:17]** Definice AI Jamu textem
+- **[9:20 - 10:22]** Proces zvání: waitlist
+- **[10:22 - 11:16]** Dohoda na procesech a nejasnostech
+- **[11:16 - 12:37]** Kdo je zván na Hackathon
+- **[12:37 - 13:41]** Praktická vize: Slack a signup
+- **[13:43 - 15:05]** Kapacita a omezení účasti
+- **[15:06 - 16:47]** Princip kapacity a konvidence
+- **[16:52 - 17:46]** Waitlist a přijímání do Slacku
+- **[18:15 - 19:57]** Riziko noobů vs formát
+- **[20:23 - 22:14]** Obavy z dynamiky a threshold
+- **[22:15 - 23:55]** Alternativa: plus jedna
+- **[23:55 - 25:31]** Soft filtr a kritéria přínosu
+- **[25:31 - 26:29]** Kompromis: začít plus jedničkou
+- **[26:30 - 27:45]** Domluva a text o AI Jamu
+- **[27:45 - 29:32]** Zmínka o firmách a sponzoringu
+- **[29:37 - 30:54]** Rozjet komunikaci a role
+- **[30:57 - 33:39]** Obava z náhlého odchodu
+- **[33:43 - 35:23]** Dohoda: nenáhlé změny
+- **[35:23 - 36:55]** One-way doors a opatrnost
+- **[36:56 - 40:39]** Úkoly: intro AI Jam a hackathon komunikace
+- **[40:41 - 41:06]** Ukončení hovoru

@@ -1,0 +1,33 @@
+{
+  "title": "AI Jam – eval smyčky a training loop",
+  "date": "2026-07-02",
+  "type": "meeting",
+  "tags": [
+    "AI Jam",
+    "eval",
+    "training-loop",
+    "hill-climbing",
+    "prompt-optimization",
+    "ground-truth",
+    "LLM-as-judge",
+    "vibe-coding"
+  ],
+  "project": "AI Jam",
+  "language": "cs",
+  "duration": "2h 43m",
+  "plaud_id": "b7e02fcb3db01a27cd9c97749e864dcb",
+  "raw_recording": {
+    "file_id": "b7e02fcb3db01a27cd9c97749e864dcb",
+    "merged_ids": [
+      "b7e02fcb3db01a27cd9c97749e864dcb",
+      "af5fd20982b784c286f07bfaf13e24b4"
+    ],
+    "filename": "2026-07-02 09:03:18",
+    "date": "2026-07-02",
+    "duration": 9830000,
+    "folder": null,
+    "start_time": 1782975798000,
+    "merged": true,
+    "part_count": 2
+  }
+}

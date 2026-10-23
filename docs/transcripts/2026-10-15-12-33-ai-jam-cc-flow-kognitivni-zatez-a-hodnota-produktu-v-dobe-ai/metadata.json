@@ -1,0 +1,33 @@
+{
+  "class": "immutable",
+  "type": "transcript",
+  "title": "AI Jam: CC flow, kognitivní zátěž a hodnota produktů v době AI",
+  "date": "2026-10-15",
+  "event_date": "2026-10-15",
+  "category": "brainstorm",
+  "tags": [
+    "ai-jam",
+    "cc-flow",
+    "cc-tree",
+    "human-in-the-loop",
+    "kognitivni-load",
+    "produktovy-management",
+    "opinionated-produkty",
+    "stavebni-bloky",
+    "things"
+  ],
+  "project": "default",
+  "language": "cs",
+  "duration": "16m",
+  "source": "wispr",
+  "wispr_id": "757e37bc-e475-4aec-8d4a-e4eb65826ff0",
+  "raw_recording": {
+    "file_id": "757e37bc-e475-4aec-8d4a-e4eb65826ff0",
+    "source": "wispr",
+    "filename": "Human‑AI Interaction Flow",
+    "date": "2026-10-15",
+    "duration": 1013247,
+    "folder": null,
+    "start_time": 1792060416388
+  }
+}

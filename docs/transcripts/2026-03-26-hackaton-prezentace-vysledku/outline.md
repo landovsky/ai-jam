@@ -1,0 +1,45 @@
+# Outline: 03-26 Hackaton: prezentace výsledků
+
+- **[0:12 - 0:42]** Úvod a projekty
+- **[0:42 - 1:58]** Zadání a nástroje paměti
+- **[1:58 - 2:21]** Embeddings vs graf DB
+- **[2:26 - 3:51]** Cíle, data a testy
+- **[3:51 - 4:31]** Testovací pipeline popis
+- **[4:31 - 5:18]** Dotazování databáze
+- **[5:22 - 6:32]** Graf DB principy
+- **[6:34 - 7:42]** Nálezy: halucinace a čas
+- **[7:43 - 8:53]** Mem0 a LLM rozhodování
+- **[8:53 - 9:45]** Backfill a výkon
+- **[10:02 - 12:18]** MCP server inventář HW
+- **[12:18 - 12:37]** Další kroky integrace
+- **[12:54 - 13:27]** Přechod k další části
+- **[13:27 - 14:40]** Agentní společnost setup
+- **[14:40 - 15:13]** Poznatky a vizualizace
+- **[15:43 - 16:32]** Dashboard a metriky
+- **[16:32 - 17:58]** Reflexe řízení a board
+- **[18:00 - 18:59]** Highlighty a problémy
+- **[18:59 - 20:14]** Koncept a očekávání
+- **[20:14 - 20:49]** Integrace vlastních agentů
+- **[20:49 - 21:51]** Scrum Master a bloky
+- **[21:51 - 22:38]** Limity integrací a rizika
+- **[22:40 - 24:00]** Lokální balík a realita
+- **[24:00 - 25:22]** Editor kanceláře
+- **[26:12 - 27:30]** Tým a cíle datových decků
+- **[27:30 - 29:04]** Ingest pipeline a LLM+Python
+- **[29:04 - 30:13]** Výstupy: deck, report, JSON
+- **[30:15 - 31:24]** Vizualizace dotazníků
+- **[31:26 - 32:22]** Výběr typů grafů
+- **[32:25 - 32:52]** Demo a perzistence dotazů
+- **[32:55 - 33:30]** Scope a frontend demo
+- **[33:32 - 34:19]** Prohlídka dotazníků
+- **[34:19 - 35:00]** Interaktivní srovnání odpovědí
+- **[35:01 - 36:22]** Dimenze vizualizace
+- **[36:24 - 37:38]** Problém opačných odpovědí
+- **[37:38 - 38:46]** Interpretace a game faktor
+- **[38:46 - 39:16]** Backend zapnutí a ID
+- **[39:17 - 40:10]** Úvodní stránka a random
+- **[40:10 - 41:11]** Datové zdroje a porovnání
+- **[41:11 - 41:42]** Vyhodnocení obrazovek
+- **[41:50 - 42:34]** Jiný způsob vyhodnocení
+- **[42:53 - 44:12]** Užitečnost a nasazení
+- **[44:20 - 44:22]** Závěr

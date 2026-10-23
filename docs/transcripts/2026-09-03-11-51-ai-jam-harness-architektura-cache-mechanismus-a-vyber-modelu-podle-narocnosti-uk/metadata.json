@@ -1,0 +1,28 @@
+{
+  "title": "AI Jam: harness architektura, cache mechanismus a výběr modelů podle náročnosti úkolu",
+  "date": "2026-09-03",
+  "type": "meeting",
+  "tags": [
+    "ai-jam",
+    "harness",
+    "context-caching",
+    "agentic-loop",
+    "model-selection",
+    "tool-calling",
+    "security-guardrails"
+  ],
+  "project": "default",
+  "language": "cs",
+  "duration": "50m",
+  "source": "plaud",
+  "plaud_id": "5b3f5e9ae9845f7d7e8b7cb84a2f0ba2",
+  "raw_recording": {
+    "file_id": "5b3f5e9ae9845f7d7e8b7cb84a2f0ba2",
+    "source": "plaud",
+    "filename": "2026-09-03 11:51:08",
+    "date": "2026-09-03",
+    "duration": 3043000,
+    "folder": null,
+    "start_time": 1788429068000
+  }
+}
